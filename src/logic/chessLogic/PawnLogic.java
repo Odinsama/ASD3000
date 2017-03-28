@@ -16,8 +16,10 @@ public class PawnLogic extends MoveLogic {
     @Override
     public void getValidMoves() {
         setPosition();
-        moves.add(TILES[x][y + DIR]);
-        if (!PIECE.hasMoved) {
+        if (TILES[x][y + DIR].getPiece()==null) {
+            moves.add(TILES[x][y + DIR]);
+        }
+        if (!PIECE.hasMoved && TILES[x][y + DIR].getPiece()==null && TILES[x][y + 2 * DIR].getPiece()==null) {
             moves.add(TILES[x][y + 2* DIR]);
         }
         if (x+ DIR !=-1 && x+ DIR !=8){
