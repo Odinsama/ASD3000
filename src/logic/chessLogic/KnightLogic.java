@@ -14,30 +14,14 @@ public class KnightLogic extends MoveLogic {
     @Override
     public void getValidMoves() {
         setPosition();
-        if (x- DIR <8 && x- DIR >=0 && y+ DIR *2<8 && y+ DIR *2>=0){
-            moves.add(TILES[x- DIR][y+ DIR *2]);
-        }
-        if (x+ DIR <8 && x+ DIR >=0 && y+ DIR *2<8 && y+ DIR *2>=0){
-            moves.add(TILES[x+ DIR][y+ DIR *2]);
-        }
-        if (x- DIR <8 && x- DIR >=0 && y- DIR *2<8 && y- DIR *2>=0){
-            moves.add(TILES[x- DIR][y- DIR *2]);
-        }
-        if (x+ DIR <8 && x+ DIR >=0 && y- DIR *2<8 && y- DIR *2>=0){
-            moves.add(TILES[x+ DIR][y- DIR *2]);
-        }
-        if (x- DIR *2 <8 && x- DIR *2>=0 && y+ DIR <8 && y+ DIR >=0){
-            moves.add(TILES[x- DIR *2][y+ DIR]);
-        }
-        if (x+ DIR *2 <8 && x+ DIR *2 >=0 && y+ DIR <8 && y+ DIR >=0){
-            moves.add(TILES[x+ DIR *2][y+ DIR]);
-        }
-        if (x- DIR *2 <8 && x- DIR *2 >=0 && y- DIR <8 && y- DIR >=0){
-            moves.add(TILES[x- DIR *2][y- DIR]);
-        }
-        if (x+ DIR *2 <8 && x+ DIR *2>=0 && y- DIR <8 && y- DIR >=0){
-            moves.add(TILES[x+ DIR *2][y- DIR]);
-        }
+        addMoveSafely(-1, +2);
+        addMoveSafely(+1, +2);
+        addMoveSafely(-1, -2);
+        addMoveSafely(+1, -2);
+        addMoveSafely(-2, +1);
+        addMoveSafely(+2, +1);
+        addMoveSafely(-2, -1);
+        addMoveSafely(+2, -1);
 
         //filters captures from moves
         moves.stream()
@@ -52,6 +36,12 @@ public class KnightLogic extends MoveLogic {
         captures.forEach(this::highlightCapture);
         captures.clear();
 
+    }
+
+    private void addMoveSafely(int xIncrement, int yIncrement) {
+        try{
+            moves.add(TILES[x + xIncrement][y + yIncrement]);
+        }catch (ArrayIndexOutOfBoundsException ignored){}
     }
 
 }
