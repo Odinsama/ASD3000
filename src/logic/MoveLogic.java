@@ -46,7 +46,10 @@ public abstract class MoveLogic {
     }
 
     protected void highlightCapture(Tile tile){
-        tile.highlight(Color.orange);
+        Piece highlightPiece = tile.getPiece();
+        if (highlightPiece.isNorth() != PIECE.isNorth()) {
+            tile.highlight(Color.orange);
+        }
     }
 
 }
