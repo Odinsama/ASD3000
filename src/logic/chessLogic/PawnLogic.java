@@ -16,27 +16,26 @@ public class PawnLogic extends MoveLogic {
     @Override
     public void getValidMoves() {
         setPosition();
-        if (TILES[x][y + DIR].getPiece()==null) {
-            moves.add(TILES[x][y + DIR]);
-        }
+        addMoveSafely(0 , DIR);
+
+        //first move checking if it can move two steps forward
         if (!PIECE.hasMoved && TILES[x][y + DIR].getPiece()==null && TILES[x][y + 2 * DIR].getPiece()==null) {
             moves.add(TILES[x][y + 2* DIR]);
         }
-        if (x+ DIR !=-1 && x+ DIR !=8){
-            captures.add(TILES[x+ DIR][y+ DIR]);
-        }
-        if (x- DIR !=-1 && x- DIR !=8) {
-            captures.add(TILES[x - DIR][y + DIR]);
-        }
+        addCaptureSafely(DIR, DIR);
+        addCaptureSafely(-DIR, DIR);
+        highlightValidMoves();
+    }
+
+    @Override
+    protected void highlightValidMoves() {
         moves.stream()
                 .filter(this::checkIfEmpty)
                 .forEach(this::highlightMove);
-
         captures.stream()
                 .filter(tile-> !checkIfEmpty(tile))
                 .forEach(this::highlightCapture);
         moves.clear();
         captures.clear();
     }
-
 }

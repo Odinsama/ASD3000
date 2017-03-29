@@ -1,7 +1,7 @@
 package gui.domain.concreteObjects.Chess.Pieces;
 
 import gui.domain.abstractObjects.Piece;
-import logic.MoveLogic;
+import logic.chessLogic.BishopLogic;
 import names.PieceType;
 
 import javax.imageio.ImageIO;
@@ -25,5 +25,6 @@ public class Bishop extends Piece {
             e.printStackTrace();
         }
         setPieceType(PieceType.BISHOP);
+        moveLogic = new BishopLogic(this);
     }
 }

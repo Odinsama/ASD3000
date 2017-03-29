@@ -2,6 +2,7 @@ package gui.domain.concreteObjects.Chess.Pieces;
 
 import gui.domain.abstractObjects.Piece;
 import logic.MoveLogic;
+import logic.chessLogic.KingLogic;
 import names.PieceType;
 
 import javax.imageio.ImageIO;
@@ -25,6 +26,7 @@ public class King extends Piece{
             e.printStackTrace();
         }
         setPieceType(PieceType.KING);
+        moveLogic = new KingLogic(this);
     }
 
 }

@@ -22,34 +22,6 @@ public class RookLogic extends MoveLogic {
         getValidMovesSafely(-1, 0);
         //right
         getValidMovesSafely(+1, 0);
-        moves.forEach(this::highlightMove);
-        moves.clear();
-        captures.forEach(this::highlightCapture);
-        captures.clear();
-    }
-
-    //if this safe method hits an array exception the
-    // program will just move on to the next direction
-    private void getValidMovesSafely(int xIncrement, int yIncrement) {
-        try{
-            //start the sequence one tile away from the
-            // origin so it does not check itself as a valid move
-            x += xIncrement;
-            y += yIncrement;
-            while (TILES[x][y].getPiece() == null) {
-                moves.add(TILES[x][y]);
-                x += xIncrement;
-                y += yIncrement;
-            }
-        }catch (ArrayIndexOutOfBoundsException ignored){}
-        finally {
-            try{
-                if (TILES[x][y].getPiece() != null){
-                    captures.add(TILES[x][y]);
-                }
-            }catch (ArrayIndexOutOfBoundsException ignored){}
-            //reset x and y to the original position
-            setPosition();
-        }
+        highlightValidMoves();
     }
 }
