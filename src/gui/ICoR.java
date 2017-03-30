@@ -1,7 +1,4 @@
-package controller;
-
-import gui.domain.abstractObjects.Piece;
-import gui.domain.concreteObjects.Tile;
+package gui;
 
 /**
  * Created by Odin on 3/2/2017.

@@ -1,9 +1,8 @@
 package gui.domain.abstractObjects;
 
-import controller.GameController;
+import game.GameController;
+import game.logic.MoveLogic;
 import gui.domain.concreteObjects.Tile;
-import logic.MoveLogic;
-import names.PieceType;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,7 +16,6 @@ public abstract class Piece extends JComponent {
 
     private final Boolean isNorth;
     protected Image image;
-    private PieceType pieceType;
     public boolean hasMoved = false;
     protected MoveLogic moveLogic;
 
@@ -33,7 +31,7 @@ public abstract class Piece extends JComponent {
                 super.mousePressed(e);
                 if (GameController.isYourTurn(isNorth)) {
                     GameController.clearHighlights();
-                    moveLogic.getValidMoves();
+                    moveLogic.setValidMoves();
                     GameController.setOrigin(piece);
                 }
                 else if (captureIsValid()){
@@ -47,15 +45,6 @@ public abstract class Piece extends JComponent {
     private boolean captureIsValid() {
         Tile parentTile = (Tile) getParent();
         return parentTile.isHighlighted();
-    }
-
-
-    public PieceType getPieceType(){
-        return pieceType;
-    }
-
-    protected void setPieceType(PieceType piecetype){
-        this.pieceType = piecetype;
     }
 
     public boolean isNorth() {

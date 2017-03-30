@@ -1,8 +1,6 @@
 package gui.domain.concreteObjects.Chess;
 
 import gui.domain.abstractObjects.Piece;
-import gui.domain.concreteObjects.Chess.Pieces.*;
-import logic.MoveLogic;
 
 import java.util.ArrayList;
 import java.util.Collections;

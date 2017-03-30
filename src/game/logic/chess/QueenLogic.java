@@ -1,7 +1,7 @@
-package logic.chessLogic;
+package game.logic.chess;
 
 import gui.domain.concreteObjects.Chess.Pieces.Queen;
-import logic.MoveLogic;
+import game.logic.MoveLogic;
 
 /**
  * Created by Odin on 3/29/2017.
@@ -12,24 +12,24 @@ public class QueenLogic extends MoveLogic {
     }
 
     @Override
-    public void getValidMoves() {
+    public void setValidMoves() {
         setPosition();
         //moves going up the board
-        getValidMovesSafely(0, -1);
+        getValidDirectionalMovesSafely(0, -1);
         //down
-        getValidMovesSafely(0, +1);
+        getValidDirectionalMovesSafely(0, +1);
         //left
-        getValidMovesSafely(-1, 0);
+        getValidDirectionalMovesSafely(-1, 0);
         //right
-        getValidMovesSafely(+1, 0);
+        getValidDirectionalMovesSafely(+1, 0);
         //moves going up and left the board
-        getValidMovesSafely(-1, -1);
+        getValidDirectionalMovesSafely(-1, -1);
         //down and right
-        getValidMovesSafely(+1, +1);
+        getValidDirectionalMovesSafely(+1, +1);
         //down and left
-        getValidMovesSafely(-1, +1);
+        getValidDirectionalMovesSafely(-1, +1);
         //up and right
-        getValidMovesSafely(+1, -1);
+        getValidDirectionalMovesSafely(+1, -1);
         highlightValidMoves();
     }
 }

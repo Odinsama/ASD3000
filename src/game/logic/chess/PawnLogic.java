@@ -1,7 +1,7 @@
-package logic.chessLogic;
+package game.logic.chess;
 
 import gui.domain.concreteObjects.Chess.Pieces.Pawn;
-import logic.MoveLogic;
+import game.logic.MoveLogic;
 
 
 /**
@@ -14,7 +14,7 @@ public class PawnLogic extends MoveLogic {
     }
 
     @Override
-    public void getValidMoves() {
+    public void setValidMoves() {
         setPosition();
         addMoveSafely(0 , DIR);
 

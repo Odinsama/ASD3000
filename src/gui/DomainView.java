@@ -1,9 +1,9 @@
 package gui;
 
-import controller.GameController;
+import game.GameController;
 import gui.domain.abstractObjects.Board;
-import logic.Game;
-import logic.chessLogic.ChessGame;
+import game.Game;
+import game.logic.chess.ChessGame;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package logic;
+package game;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;

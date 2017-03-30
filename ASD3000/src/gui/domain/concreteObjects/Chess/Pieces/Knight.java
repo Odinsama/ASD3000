@@ -1,8 +1,7 @@
 package gui.domain.concreteObjects.Chess.Pieces;
 
+import game.logic.chess.KnightLogic;
 import gui.domain.abstractObjects.Piece;
-import logic.MoveLogic;
-import logic.chessLogic.KnightLogic;
 import names.PieceType;
 
 import javax.imageio.ImageIO;

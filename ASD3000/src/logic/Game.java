@@ -1,10 +1,9 @@
-package logic;
+package game;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
 
-import java.awt.*;
 import java.util.Stack;
 
 /**

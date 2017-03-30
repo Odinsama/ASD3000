@@ -1,4 +1,4 @@
-package logic;
+package game;
 
 /**
  * Created by Odin on 3/1/2017.

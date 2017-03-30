@@ -1,8 +1,8 @@
-package logic.chessLogic;
+package game.logic.chess;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.concreteObjects.Chess.ChessBoard;
-import logic.Game;
+import game.Game;
 
 
 import java.awt.*;

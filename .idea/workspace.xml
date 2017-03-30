@@ -1,25 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed656811-3d80-4997-b857-f06a5eff145c" name="Default" comment="Now your own pieces won't be highlighted for capture">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logic/chessLogic/BishopLogic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logic/chessLogic/KingLogic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logic/chessLogic/QueenLogic.java" />
+    <list default="true" id="ed656811-3d80-4997-b857-f06a5eff145c" name="Default" comment="Made a lot of optimization adjustments for readability. Added Shortcuts for Undo and Redo">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/controller/ShortCuts.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/controller/ShortcutListener.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/controller/GUIController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/controller/GameController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/controller/ICoR.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/CaptureCommand.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/Command.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/Game.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/HighlightCommand.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/MoveCommand.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/MoveLogic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/ChessGame.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/KnightLogic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/PawnLogic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/RookLogic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/names/PieceType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ASD3000/names/Players.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/names/PieceType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/names/Players.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controller/GUIController.java" afterPath="$PROJECT_DIR$/src/gui/controller/GUIController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controller/GameController.java" afterPath="$PROJECT_DIR$/src/game/GameController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controller/ICoR.java" afterPath="$PROJECT_DIR$/src/gui/ICoR.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/CaptureCommand.java" afterPath="$PROJECT_DIR$/src/game/CaptureCommand.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/Command.java" afterPath="$PROJECT_DIR$/src/game/Command.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/Game.java" afterPath="$PROJECT_DIR$/src/game/Game.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/HighlightCommand.java" afterPath="$PROJECT_DIR$/src/game/HighlightCommand.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/MoveCommand.java" afterPath="$PROJECT_DIR$/src/game/MoveCommand.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/MoveLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/MoveLogic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/chessLogic/BishopLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/BishopLogic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/chessLogic/ChessGame.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/ChessGame.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/chessLogic/KingLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/KingLogic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/chessLogic/KnightLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/KnightLogic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/chessLogic/PawnLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/PawnLogic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/chessLogic/QueenLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/QueenLogic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/chessLogic/RookLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/RookLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/DomainView.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/DomainView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/MainFrame.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/MainFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/NorthPane$1.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/NorthPane$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/NorthPane$2.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/NorthPane$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/abstractObjects/Piece$1.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/abstractObjects/Piece$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/abstractObjects/Piece.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/abstractObjects/Piece.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/ChessSet.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/ChessSet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Bishop.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Bishop.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/King.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/King.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Knight.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Knight.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Pawn.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Pawn.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Queen.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Queen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/MoveLogic.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/logic/MoveLogic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/KnightLogic.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/KnightLogic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/PawnLogic.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/PawnLogic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/RookLogic.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/logic/chessLogic/RookLogic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Rook.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Chess/Pieces/Rook.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Tile$1.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/concreteObjects/Tile$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/controller/GameController.java" afterPath="$PROJECT_DIR$/ASD3000/src/controller/GameController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/gui/DomainView.java" afterPath="$PROJECT_DIR$/ASD3000/src/gui/DomainView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/gui/domain/abstractObjects/Piece.java" afterPath="$PROJECT_DIR$/ASD3000/src/gui/domain/abstractObjects/Piece.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/ChessSet.java" afterPath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/ChessSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Bishop.java" afterPath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Bishop.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/King.java" afterPath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/King.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Knight.java" afterPath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Knight.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Pawn.java" afterPath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Pawn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Queen.java" afterPath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Queen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Rook.java" afterPath="$PROJECT_DIR$/ASD3000/src/gui/domain/concreteObjects/Chess/Pieces/Rook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/CaptureCommand.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/CaptureCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/Command.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/Command.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/Game.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/HighlightCommand.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/HighlightCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/MoveCommand.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/MoveCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/MoveLogic.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/MoveLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/chessLogic/ChessGame.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/chessLogic/ChessGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/chessLogic/KnightLogic.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/chessLogic/KnightLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/chessLogic/PawnLogic.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/chessLogic/PawnLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ASD3000/src/logic/chessLogic/RookLogic.java" afterPath="$PROJECT_DIR$/ASD3000/src/logic/chessLogic/RookLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/DomainView.java" afterPath="$PROJECT_DIR$/src/gui/DomainView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/MainFrame.java" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/NorthPane.java" afterPath="$PROJECT_DIR$/src/gui/NorthPane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/abstractObjects/Piece.java" afterPath="$PROJECT_DIR$/src/gui/domain/abstractObjects/Piece.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/ChessSet.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/ChessSet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Bishop.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Bishop.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/King.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/King.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Knight.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Knight.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Pawn.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Pawn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Queen.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Queen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/MoveLogic.java" afterPath="$PROJECT_DIR$/src/logic/MoveLogic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/chessLogic/KnightLogic.java" afterPath="$PROJECT_DIR$/src/logic/chessLogic/KnightLogic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/chessLogic/PawnLogic.java" afterPath="$PROJECT_DIR$/src/logic/chessLogic/PawnLogic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/chessLogic/RookLogic.java" afterPath="$PROJECT_DIR$/src/logic/chessLogic/RookLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Rook.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Rook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Tile.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/Tile.java" />
     </list>
     <ignored path="ASD3000.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,21 +105,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="QueenLogic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/QueenLogic.java">
+      <file leaf-file-name="ShortcutListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/controller/ShortcutListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BishopLogic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/BishopLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="30" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="24" selection-end-column="30" />
+            <state relative-caret-position="340">
+              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,8 +117,72 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MoveLogic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/MoveLogic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-168">
+              <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DomainView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ASD3000/src/gui/DomainView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveCommand.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ASD3000/src/logic/MoveCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BishopLogic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/chess/BishopLogic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChessGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/chess/ChessGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KingLogic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/chess/KingLogic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="KnightLogic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/KnightLogic.java">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/chess/KnightLogic.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
@@ -73,61 +191,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoveLogic.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/logic/MoveLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="King.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/King.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KingLogic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/KingLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PieceType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/names/PieceType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Players.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/names/Players.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PawnLogic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/PawnLogic.java">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/chess/PawnLogic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="544">
+              <caret line="35" column="51" lean-forward="true" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShortCuts.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/controller/ShortCuts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -139,8 +217,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -173,6 +251,9 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="modificationStamps">
@@ -187,25 +268,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/concreteObjects/Chess/Pieces/Bishop.java" />
-        <option value="$PROJECT_DIR$/src/abstractObjects/Game.java" />
-        <option value="$PROJECT_DIR$/src/concreteObjects/Chess/Pieces/King.java" />
-        <option value="$PROJECT_DIR$/src/controller/ChessGame.java" />
-        <option value="$PROJECT_DIR$/src/gui/IBoardController.java" />
-        <option value="$PROJECT_DIR$/src/EntryPoint.java" />
-        <option value="$PROJECT_DIR$/src/names/PieceType.java" />
-        <option value="$PROJECT_DIR$/src/concreteObjects/Chess/ChessBoard.java" />
-        <option value="$PROJECT_DIR$/src/abstractObjects/Piece.java" />
-        <option value="$PROJECT_DIR$/src/logic/IGameCommand.java" />
         <option value="$PROJECT_DIR$/src/abstractObjects/Board.java" />
         <option value="$PROJECT_DIR$/src/concreteObjects/Tile.java" />
         <option value="$PROJECT_DIR$/src/controller/ICoROrigin.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Highlight.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/ChessSet.java" />
-        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Pawn.java" />
         <option value="$PROJECT_DIR$/src/logic/HighlightCommand.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/abstractObjects/Game.java" />
-        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Knight.java" />
         <option value="$PROJECT_DIR$/src/controller/Game.java" />
         <option value="$PROJECT_DIR$/src/logic/MoveCommand.java" />
         <option value="$PROJECT_DIR$/src/logic/chessLogic/ChessGame.java" />
@@ -217,27 +286,39 @@
         <option value="$PROJECT_DIR$/src/controller/ICoR.java" />
         <option value="$PROJECT_DIR$/src/gui/CenterPane.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Tile.java" />
-        <option value="$PROJECT_DIR$/src/gui/MainFrame.java" />
-        <option value="$PROJECT_DIR$/src/gui/NorthPane.java" />
         <option value="$PROJECT_DIR$/src/logic/CaptureCommand.java" />
         <option value="$PROJECT_DIR$/src/controller/GameController.java" />
         <option value="$PROJECT_DIR$/src/gui/DomainView.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/abstractObjects/Board.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/ChessBoard.java" />
         <option value="$PROJECT_DIR$/src/logic/Game.java" />
-        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Rook.java" />
-        <option value="$PROJECT_DIR$/src/gui/domain/abstractObjects/Piece.java" />
         <option value="$PROJECT_DIR$/src/logic/chessLogic/RookLogic.java" />
-        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Bishop.java" />
         <option value="$PROJECT_DIR$/src/logic/chessLogic/BishopLogic.java" />
-        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Queen.java" />
         <option value="$PROJECT_DIR$/src/logic/chessLogic/QueenLogic.java" />
         <option value="$PROJECT_DIR$/src/logic/chessLogic/PawnLogic.java" />
-        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/King.java" />
         <option value="$PROJECT_DIR$/src/logic/Directions.java" />
         <option value="$PROJECT_DIR$/src/logic/chessLogic/KnightLogic.java" />
         <option value="$PROJECT_DIR$/src/logic/MoveLogic.java" />
         <option value="$PROJECT_DIR$/src/logic/chessLogic/KingLogic.java" />
+        <option value="$PROJECT_DIR$/src/gui/NorthPane.java" />
+        <option value="$PROJECT_DIR$/src/controller/KeyAdapter.java" />
+        <option value="$PROJECT_DIR$/src/gui/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/controller/ShortcutListener.java" />
+        <option value="$PROJECT_DIR$/src/game/GameController.java" />
+        <option value="$PROJECT_DIR$/src/gui/logic/ShortcutListener.java" />
+        <option value="$PROJECT_DIR$/src/gui/ICoR.java" />
+        <option value="$PROJECT_DIR$/src/gui/controller/GUIController.java" />
+        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Bishop.java" />
+        <option value="$PROJECT_DIR$/src/gui/domain/abstractObjects/Piece.java" />
+        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/King.java" />
+        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Knight.java" />
+        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Pawn.java" />
+        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Queen.java" />
+        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Rook.java" />
+        <option value="$PROJECT_DIR$/src/gui/controller/ShortCuts.java" />
+        <option value="$PROJECT_DIR$/src/gui/controller/ShortcutListener.java" />
+        <option value="$PROJECT_DIR$/src/game/logic/MoveLogic.java" />
+        <option value="$PROJECT_DIR$/src/game/logic/chess/BishopLogic.java" />
       </list>
     </option>
   </component>
@@ -269,6 +350,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -310,7 +392,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="names" />
+              <option name="myItemId" value="gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -325,6 +407,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASD3000" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASD3000" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -346,169 +450,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="logic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chessLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="concreteObjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="concreteObjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="concreteObjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pieces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="abstractObjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="chess" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -526,11 +481,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="logic.chessLogic" />
+      <recent name="gui.controller" />
       <recent name="controller" />
+      <recent name="logic.chessLogic" />
       <recent name="Controller" />
       <recent name="logic" />
-      <recent name="gui.domain.concreteObjects" />
     </key>
   </component>
   <component name="RunManager" selected="Application.EntryPoint">
@@ -983,7 +938,8 @@
       <workItem from="1490555996869" duration="14474000" />
       <workItem from="1490688920581" duration="6223000" />
       <workItem from="1490702915387" duration="495000" />
-      <workItem from="1490742957086" duration="5069000" />
+      <workItem from="1490742957086" duration="15411000" />
+      <workItem from="1490894854460" duration="1494000" />
     </task>
     <task id="LOCAL-00001" summary="Now your own pieces won't be highlighted for capture">
       <created>1490743065388</created>
@@ -999,15 +955,22 @@
       <option name="project" value="LOCAL" />
       <updated>1490743234257</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Now your own pieces won't be highlighted for capture">
+      <created>1490793102451</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1490793102451</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145354000" />
+    <option name="totallyTimeSpent" value="157190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1023,14 +986,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49373695" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25106838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25053418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Maven-2 Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1059,7 +1022,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Now your own pieces won't be highlighted for capture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now your own pieces won't be highlighted for capture" />
+    <MESSAGE value="Made a lot of optimization adjustments for readability. Added Shortcuts for Undo and Redo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a lot of optimization adjustments for readability. Added Shortcuts for Undo and Redo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1070,133 +1034,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Tile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/RookLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/abstractObjects/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/abstractObjects/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
-          <folding>
-            <element signature="e#1863#1864#0" expanded="true" />
-            <element signature="e#1902#1903#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/KnightLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MoveLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/PawnLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Tile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MoveCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/abstractObjects/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding>
-            <element signature="e#1863#1864#0" expanded="true" />
-            <element signature="e#1902#1903#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Rook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/RookLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/game/logic/chess/RookLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
@@ -1211,7 +1049,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/PawnLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/game/logic/chess/PawnLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -1219,7 +1057,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MoveLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/game/logic/MoveLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="33" column="54" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="54" />
@@ -1235,18 +1073,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/GameController.java">
+    <entry file="file://$PROJECT_DIR$/src/game/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Pawn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1255,7 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1267,7 +1096,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/CaptureCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/game/CaptureCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -1283,25 +1112,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/Command.java">
+    <entry file="file://$PROJECT_DIR$/src/game/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MoveCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Rook.java">
+    <entry file="file://$PROJECT_DIR$/src/game/MoveCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1310,22 +1132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/abstractObjects/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1345,15 +1151,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ICoR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/HighlightCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/game/HighlightCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -1361,42 +1159,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
           <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
           <folding>
-            <element signature="e#1863#1864#0" expanded="true" />
-            <element signature="e#1902#1903#0" expanded="true" />
+            <element signature="e#1862#1863#0" expanded="false" />
+            <element signature="e#1901#1902#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Knight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Queen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Bishop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/RookLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/game/logic/chess/RookLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="23" column="35" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="23" selection-end-column="35" />
@@ -1404,17 +1178,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/BishopLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="30" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/QueenLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/game/logic/chess/QueenLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
@@ -1422,47 +1186,197 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/PawnLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/names/PieceType.java" />
+    <entry file="file://$PROJECT_DIR$/src/names/Players.java" />
+    <entry file="file://$PROJECT_DIR$/src/logic/Directions.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/AbstractButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        <state relative-caret-position="197">
+          <caret line="2125" column="16" lean-forward="false" selection-start-line="2125" selection-start-column="16" selection-end-line="2125" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/event/MenuKeyListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/JMenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="732" column="16" lean-forward="false" selection-start-line="732" selection-start-column="16" selection-end-line="732" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/event/MenuKeyEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="71" column="11" lean-forward="false" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/NorthPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#363#564#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#650#851#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/KeyAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/src/gui/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/ICoR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/controller/GUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="128" column="17" lean-forward="false" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/domain/abstractObjects/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Rook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Queen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Pawn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Knight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/King.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/names/PieceType.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/Chess/Pieces/Bishop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/names/Players.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/awt/event/KeyEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="14501">
+          <caret line="881" column="9" lean-forward="false" selection-start-line="881" selection-start-column="9" selection-end-line="881" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#65199#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#31198#31199#0" expanded="false" />
+            <element signature="e#31258#31259#0" expanded="false" />
+            <element signature="e#31763#31764#0" expanded="false" />
+            <element signature="e#31827#31828#0" expanded="false" />
+            <element signature="e#39153#39154#0" expanded="false" />
+            <element signature="e#39183#39184#0" expanded="false" />
+            <element signature="e#39387#39388#0" expanded="false" />
+            <element signature="e#39425#39426#0" expanded="false" />
+            <element signature="e#40400#40401#0" expanded="false" />
+            <element signature="e#40438#40439#0" expanded="false" />
+            <element signature="e#41838#41839#0" expanded="false" />
+            <element signature="e#41872#41873#0" expanded="false" />
+            <element signature="e#62673#62674#0" expanded="false" />
+            <element signature="e#62716#62717#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/Directions.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/controller/ShortCuts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="221">
+          <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/KnightLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/controller/ShortcutListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/chess/KnightLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
@@ -1470,18 +1384,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/chessLogic/KingLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/game/logic/chess/PawnLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        <state relative-caret-position="544">
+          <caret line="35" column="51" lean-forward="true" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MoveLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/game/logic/chess/KingLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        <state relative-caret-position="204">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/chess/ChessGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/chess/BishopLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/MoveLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ASD3000/src/gui/DomainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ASD3000/src/logic/MoveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding />
         </state>
       </provider>
