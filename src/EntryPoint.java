@@ -5,7 +5,7 @@ import gui.MainFrame;
  */
 public class EntryPoint {
     public static void main(String[] args) {
-        MainFrame ui = new MainFrame("Odin's Board Games");
+        MainFrame ui = new MainFrame();
         ui.init();
     }
 }

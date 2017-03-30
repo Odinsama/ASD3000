@@ -9,7 +9,7 @@ import java.awt.event.MouseEvent;
 /**
  * Created by Odin on 2/14/2017.
  */
-public class NorthPane extends JMenuBar{
+class NorthPane extends JMenuBar{
 
     NorthPane(){
         JMenu jmenu = new JMenu("Actions");

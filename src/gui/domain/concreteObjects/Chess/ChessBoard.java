@@ -20,8 +20,8 @@ public class ChessBoard extends Board {
         for (int y = 0; y < COLUMNS; y++) {
             for (int x = 0; x < ROWS; x++){
                 if (chessSet.get(i)!=null) {
-                    tiles[x][y].setPiece((Piece) chessSet.get(i));
-                    tiles[x][y].add((Piece) chessSet.get(i));
+                    TILES[x][y].setPiece((Piece) chessSet.get(i));
+                    TILES[x][y].add((Piece) chessSet.get(i));
                 }
                 i++;
             }

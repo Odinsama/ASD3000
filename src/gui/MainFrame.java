@@ -11,12 +11,12 @@ import java.awt.*;
  */
 public class MainFrame extends JFrame implements ICoR {
 
-    private NorthPane northPane;
-    private CenterPane centerPane;
-    private SouthPane southPane;
+    private NorthPane northPane = new NorthPane();
+    private CenterPane centerPane = new CenterPane();
+    private SouthPane southPane = new SouthPane();
 
-    public MainFrame(String title){
-        super(title);
+    public MainFrame(){
+        super("Odin's Board Games");
 
         //Swing thread to handle graphics in proper order,
         //without this many concurrency problems can occur.
@@ -35,9 +35,9 @@ public class MainFrame extends JFrame implements ICoR {
             Container c = getContentPane();
 
             //add components
-            c.add(northPane = new NorthPane(), BorderLayout.NORTH);
-            c.add(centerPane = new CenterPane(), BorderLayout.CENTER);
-            c.add(southPane = new SouthPane(), BorderLayout.SOUTH);
+            c.add(northPane, BorderLayout.NORTH);
+            c.add(centerPane, BorderLayout.CENTER);
+            c.add(southPane, BorderLayout.SOUTH);
 
             ShortcutListener shortcutListener = new ShortcutListener();
             addKeyListener(shortcutListener);

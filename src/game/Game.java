@@ -22,7 +22,7 @@ public abstract class Game {
         return board = generateBoard();
     }
 
-    public abstract Board generateBoard();
+    protected abstract Board generateBoard();
 
     public void finishGame(){
 
@@ -36,7 +36,7 @@ public abstract class Game {
         northsTurn = !northsTurn;
     }
 
-    public void undoMove() {
+    void undoMove() {
         if (commands.isEmpty())return;
         Command undoCommand = commands.pop();
         undoCommand.undo();
@@ -44,7 +44,7 @@ public abstract class Game {
         northsTurn = !northsTurn;
     }
 
-    public void redoMove() {
+    void redoMove() {
         if (undoneCommands.isEmpty())return;
         Command command = undoneCommands.pop();
         commands.add(command);
@@ -58,11 +58,11 @@ public abstract class Game {
         originTile.highlight(Color.yellow);
     }
 
-    public boolean isNorthsTurn() {
+    boolean isNorthsTurn() {
         return northsTurn;
     }
 
-    public void capture(Piece target) {
+    void capture(Piece target) {
         CaptureCommand captureCommand = new CaptureCommand(board, origin, target);
         commands.add(captureCommand);
         undoneCommands.clear();
@@ -77,4 +77,5 @@ public abstract class Game {
     public Tile[][] getTiles() {
         return board.getTiles();
     }
+
 }
