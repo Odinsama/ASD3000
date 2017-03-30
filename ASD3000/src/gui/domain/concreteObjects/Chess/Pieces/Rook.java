@@ -1,7 +1,7 @@
 package gui.domain.concreteObjects.Chess.Pieces;
 
+import game.logic.chess.RookLogic;
 import gui.domain.abstractObjects.Piece;
-import logic.chessLogic.RookLogic;
 import names.PieceType;
 
 import javax.imageio.ImageIO;

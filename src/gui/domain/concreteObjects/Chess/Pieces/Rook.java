@@ -1,8 +1,7 @@
 package gui.domain.concreteObjects.Chess.Pieces;
 
+import game.logic.chess.RookLogic;
 import gui.domain.abstractObjects.Piece;
-import logic.chessLogic.RookLogic;
-import names.PieceType;
 
 import javax.imageio.ImageIO;
 import java.io.IOException;
@@ -24,8 +23,6 @@ public class Rook extends Piece {
         }catch (IOException e){
             e.printStackTrace();
         }
-        setPieceType(PieceType.ROOK);
         moveLogic = new RookLogic(this);
-        RookLogic rookLogic = new RookLogic(this);
     }
 }

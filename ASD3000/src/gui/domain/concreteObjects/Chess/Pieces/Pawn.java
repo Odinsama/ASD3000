@@ -1,12 +1,10 @@
 package gui.domain.concreteObjects.Chess.Pieces;
 
+import game.logic.chess.PawnLogic;
 import gui.domain.abstractObjects.Piece;
-import logic.MoveLogic;
-import logic.chessLogic.PawnLogic;
 import names.PieceType;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 

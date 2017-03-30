@@ -1,8 +1,7 @@
-package controller;
+package game;
 
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
-import logic.Game;
 
 /**
  * Created by Odin on 3/13/2017.

@@ -1,4 +1,6 @@
-package controller;
+package gui.controller;
+
+import gui.ICoR;
 
 /**
  * Created by Odin on 2/14/2017.

@@ -1,10 +1,9 @@
-package logic;
+package game;
 
 import controller.GameController;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 

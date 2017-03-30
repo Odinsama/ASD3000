@@ -1,11 +1,8 @@
-package logic.chessLogic;
+package game.logic.chess;
 
+import game.Game;
 import gui.domain.abstractObjects.Board;
 import gui.domain.concreteObjects.Chess.ChessBoard;
-import logic.Game;
-
-
-import java.awt.*;
 
 /**
  * Created by Odin on 2/14/2017.

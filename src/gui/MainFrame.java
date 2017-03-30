@@ -1,7 +1,7 @@
 package gui;
 
-import controller.GUIController;
-import controller.ICoR;
+import gui.controller.GUIController;
+import gui.controller.ShortcutListener;
 
 import javax.swing.*;
 import java.awt.*;
@@ -38,6 +38,9 @@ public class MainFrame extends JFrame implements ICoR {
             c.add(northPane = new NorthPane(), BorderLayout.NORTH);
             c.add(centerPane = new CenterPane(), BorderLayout.CENTER);
             c.add(southPane = new SouthPane(), BorderLayout.SOUTH);
+
+            ShortcutListener shortcutListener = new ShortcutListener();
+            addKeyListener(shortcutListener);
 
        });
 

@@ -1,8 +1,6 @@
-package logic;
+package game;
 
 import gui.domain.concreteObjects.Tile;
-
-import java.awt.*;
 
 /**
  * Created by Odin on 3/3/2017.

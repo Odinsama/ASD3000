@@ -1,6 +1,6 @@
 package gui;
 
-import controller.GameController;
+import game.GameController;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;

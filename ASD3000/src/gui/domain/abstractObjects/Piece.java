@@ -1,12 +1,10 @@
 package gui.domain.abstractObjects;
 
 import controller.GameController;
+import game.MoveLogic;
 import gui.domain.concreteObjects.Tile;
-import logic.MoveLogic;
 import names.PieceType;
 
-import javax.swing.*;
-import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 

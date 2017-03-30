@@ -1,8 +1,7 @@
 package gui.domain.concreteObjects.Chess.Pieces;
 
+import game.logic.chess.QueenLogic;
 import gui.domain.abstractObjects.Piece;
-import logic.chessLogic.QueenLogic;
-import names.PieceType;
 
 import javax.imageio.ImageIO;
 import java.io.IOException;
@@ -24,7 +23,6 @@ public class Queen extends Piece{
         }catch (IOException e){
             e.printStackTrace();
         }
-        setPieceType(PieceType.QUEEN);
         moveLogic = new QueenLogic(this);
     }
 }

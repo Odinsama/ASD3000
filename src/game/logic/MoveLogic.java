@@ -1,6 +1,6 @@
-package logic;
+package game.logic;
 
-import controller.GameController;
+import game.GameController;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
 
@@ -15,7 +15,6 @@ public abstract class MoveLogic {
 
     protected final Piece PIECE;
     protected final int DIR;
-    protected final int COLUMNS, ROWS;
     protected final int DOWN = 1, UP = -1, RIGHT = 1, LEFT = -1, NONE = 0;
     protected final Tile[][] TILES;
     protected int x,y;
@@ -26,8 +25,6 @@ public abstract class MoveLogic {
         this.PIECE = piece;
         DIR = piece.isNorth() ? 1 : -1;
         TILES = GameController.getTiles();
-        COLUMNS = TILES.length;
-        ROWS = TILES[0].length;
     }
 
     protected void setPosition(){
@@ -35,8 +32,7 @@ public abstract class MoveLogic {
         y = ((Tile) PIECE.getParent()).getPos().height;
     }
 
-    public abstract void getValidMoves();
-
+    public abstract void setValidMoves();
 
     protected boolean checkIfEmpty(Tile tile) {
         return tile.getPiece()==null;
@@ -55,7 +51,7 @@ public abstract class MoveLogic {
 
     //if this safe method hits an array exception the
     // program will just move on to the next direction
-    protected void getValidMovesSafely(int xIncrement, int yIncrement) {
+    protected void getValidDirectionalMovesSafely(int xIncrement, int yIncrement) {
         try{
             //start the sequence one tile away from the
             // origin so it does not check itself as a valid move

@@ -1,7 +1,6 @@
 package gui.domain.concreteObjects.Chess.Pieces;
 
 import gui.domain.abstractObjects.Piece;
-import logic.MoveLogic;
 import names.PieceType;
 
 import javax.imageio.ImageIO;

@@ -1,7 +1,7 @@
-package logic.chessLogic;
+package game.logic.chess;
 
 import gui.domain.concreteObjects.Chess.Pieces.King;
-import logic.MoveLogic;
+import game.logic.MoveLogic;
 
 /**
  * Created by Odin on 3/29/2017.
@@ -12,7 +12,7 @@ public class KingLogic extends MoveLogic {
     }
 
     @Override
-    public void getValidMoves() {
+    public void setValidMoves() {
         setPosition();
         sortMoveOrCaptureSafely(RIGHT,DOWN);
         sortMoveOrCaptureSafely(RIGHT,UP);
