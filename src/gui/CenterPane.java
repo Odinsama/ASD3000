@@ -1,15 +1,12 @@
 package gui;
 
-import gui.domain.abstractObjects.Piece;
-import gui.domain.concreteObjects.Tile;
-
 import javax.swing.*;
 import java.awt.*;
 
 /**
  * Created by Odin on 2/14/2017.
  */
-public class CenterPane extends JPanel{
+class CenterPane extends JPanel{
 
     private DomainView domainView;
 

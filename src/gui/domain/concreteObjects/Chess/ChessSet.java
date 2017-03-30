@@ -9,8 +9,8 @@ import java.util.Collections;
 /**
  * Created by Odin on 2/16/2017.
  */
-public class ChessSet extends ArrayList {
-    public ChessSet(){
+class ChessSet extends ArrayList {
+    ChessSet(){
         Piece[] chessPieces = new Piece[]{
 
                 new Rook(true), new Knight(true), new Bishop(true), new Queen(true), new King(true), new Bishop(true), new Knight(true), new Rook(true),

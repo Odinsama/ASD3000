@@ -10,13 +10,13 @@ import java.awt.*;
  */
 public abstract class Board extends JPanel{
 
-    protected Tile[][] tiles;
+    protected final Tile[][] TILES;
     protected final int COLUMNS, ROWS;
 
     protected Board(Dimension boardSize){
         COLUMNS = boardSize.width;
         ROWS = boardSize.height;
-        tiles = new Tile[COLUMNS][ROWS];
+        TILES = new Tile[COLUMNS][ROWS];
         setLayout(new GridLayout(ROWS, COLUMNS));
         for (int y = 0; y<boardSize.getWidth(); y++){
             for (int x = 0; x<boardSize.getHeight(); x++){
@@ -24,11 +24,11 @@ public abstract class Board extends JPanel{
                     Tile tile = new Tile(Color.getColor("#e8eff9"));
                     add(tile);
                     tile.setPos(x, y);
-                    tiles[x][y]=tile;
+                    TILES[x][y]=tile;
                 }else {Tile tile = new Tile(Color.LIGHT_GRAY);
                     add(tile);
                     tile.setPos(x,y);
-                    tiles[x][y]=tile;
+                    TILES[x][y]=tile;
                 }
             }
         }
@@ -62,7 +62,7 @@ public abstract class Board extends JPanel{
     }
 
     public void clearHighlights() {
-        for (Tile[] tileArray:tiles) {
+        for (Tile[] tileArray: TILES) {
             for (Tile tile:tileArray) {
                 tile.removeHighlight();
             }
@@ -70,6 +70,6 @@ public abstract class Board extends JPanel{
     }
 
     public Tile[][] getTiles() {
-        return tiles;
+        return TILES;
     }
 }

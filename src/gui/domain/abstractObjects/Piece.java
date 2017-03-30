@@ -23,7 +23,7 @@ public abstract class Piece extends JComponent {
     // "this" refers to the mouseListener not the PIECE
     private Piece piece = this;
 
-    public Piece(Boolean isNorth) {
+    protected Piece(Boolean isNorth) {
         this.isNorth = isNorth;
         addMouseListener(new MouseAdapter() {
             @Override
