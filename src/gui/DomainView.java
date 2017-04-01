@@ -1,5 +1,6 @@
 package gui;
 
+import game.GameCenter;
 import game.GameController;
 import gui.domain.abstractObjects.Board;
 import game.Game;
@@ -15,15 +16,22 @@ import java.io.IOException;
  */
 class DomainView extends JPanel {
 
-    DomainView() {
+    private GameCenter games = new GameCenter();
+    private Game currentGame;
+    private Board board;
 
+    DomainView() {
         setBorder(BorderFactory.createTitledBorder("Domain"));
         setLayout(new BorderLayout());
     }
 
-    public void setGame(Game game) {
-        GameController.initGame(game);
-        Board board = game.startGame();
+    public void setGame(String game) {
+        try{
+            remove(board);
+        }catch (NullPointerException ignored){}
+        currentGame = games.getGame(game);
+        GameController.initGame(currentGame);
+        board = currentGame.openGame();
         board.generatePieces();
         add(board);
         revalidate();

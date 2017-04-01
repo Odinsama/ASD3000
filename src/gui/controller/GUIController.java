@@ -1,6 +1,5 @@
 package gui.controller;
 
-import game.Game;
 import gui.ICoR;
 
 /**
@@ -15,7 +14,7 @@ public class GUIController {
         GUIController.ui = ui;
     }
 
-    public static void setGame(Game game) {
+    public static void setGame(String game) {
         ui.setGame(game);
     }
 

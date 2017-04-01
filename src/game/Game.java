@@ -17,16 +17,22 @@ public abstract class Game {
     private Stack<Command> undoneCommands = new Stack<>();
     private Piece origin;
     private boolean northsTurn = false;
+    private boolean hasBegun = false;
 
-    public Board startGame(){
+    private Board startGame(){
+        hasBegun = true;
         return board = generateBoard();
     }
 
-    protected abstract Board generateBoard();
-
-    public void finishGame(){
-
+    public Board openGame() {
+        return hasBegun ? resumeGame() : startGame();
     }
+
+    private Board resumeGame() {
+        return board;
+    }
+
+    protected abstract Board generateBoard();
 
     public void movePiece(Tile target){
         MoveCommand moveCommand = new MoveCommand(board, origin, target);
@@ -50,6 +56,12 @@ public abstract class Game {
         commands.add(command);
         command.execute();
         northsTurn = !northsTurn;
+    }
+
+    void resetBoard(){
+        while (!commands.isEmpty()){
+            undoMove();
+        }
     }
 
     public void setOrigin(Piece origin) {
@@ -77,5 +89,6 @@ public abstract class Game {
     public Tile[][] getTiles() {
         return board.getTiles();
     }
+
 
 }

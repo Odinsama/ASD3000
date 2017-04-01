@@ -13,23 +13,20 @@ public abstract class Board extends JPanel{
     protected final Tile[][] TILES;
     protected final int COLUMNS, ROWS;
 
-    protected Board(Dimension boardSize){
+    protected Board(Dimension boardSize, Color tileColor1, Color tileColor2){
         COLUMNS = boardSize.width;
         ROWS = boardSize.height;
         TILES = new Tile[ROWS][COLUMNS];
         setLayout(new GridLayout(ROWS, COLUMNS));
         for (int y = 0; y <COLUMNS; y++){
             for (int x = 0; x<ROWS; x++){
+                Tile tile;
                 if ((x%2==0 && y%2==0) || x%2 == y%2){
-                    Tile tile = new Tile(Color.getColor("#e8eff9"));
-                    add(tile);
-                    tile.setPos(x, y);
-                    TILES[x][y]=tile;
-                }else {Tile tile = new Tile(Color.LIGHT_GRAY);
-                    add(tile);
-                    tile.setPos(x, y);
-                    TILES[x][y]=tile;
-                }
+                    tile = new Tile(tileColor1);
+                }else {tile = new Tile(tileColor2);}
+                add(tile);
+                tile.setPos(x, y);
+                TILES[x][y]=tile;
             }
         }
 

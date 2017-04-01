@@ -82,7 +82,6 @@ public abstract class MoveLogic {
     }
     protected void sortMoveOrCaptureSafely(int xIncrement, int yIncrement){
         try {
-
             if (TILES[x + xIncrement][y + yIncrement].getPiece() == null) {
                 addMoveSafely(xIncrement, yIncrement);
             } else addCaptureSafely(xIncrement, yIncrement);

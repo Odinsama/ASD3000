@@ -10,7 +10,7 @@ import java.awt.*;
  */
 public class ChessBoard extends Board {
     public ChessBoard(Dimension boardSize) {
-        super(boardSize);
+        super(boardSize, new Color(57, 67, 68), Color.white);
     }
 
     @Override

@@ -1,6 +1,5 @@
 package gui;
 
-import game.Game;
 import gui.controller.GUIController;
 import gui.controller.ShortcutListener;
 
@@ -54,7 +53,7 @@ public class MainFrame extends JFrame implements ICoR {
     }
 
     @Override
-    public void setGame(Game game) {
+    public void setGame(String game) {
         centerPane.setGame(game);
     }
 

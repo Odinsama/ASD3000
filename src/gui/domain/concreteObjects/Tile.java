@@ -69,8 +69,10 @@ public class Tile extends JPanel {
         super.paintComponent(g);
         if (isHighlighted) {
             g.setColor(highlightColor);
-            ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.20f));
+            ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.30f));
             g.fillRect(0, 0, getWidth(), getHeight());
+            g.setColor(Color.black);
+            g.drawRect(0,0,getWidth()-1,getHeight()-1);
         }
     }
 

@@ -20,7 +20,7 @@ class CenterPane extends JPanel{
         setVisible(true);
     }
 
-    public void setGame(Game game) {
+    public void setGame(String game) {
         domainView.setGame(game);
     }
 }

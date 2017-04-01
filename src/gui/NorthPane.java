@@ -1,5 +1,6 @@
 package gui;
 
+import game.CheckersGame;
 import game.GameController;
 import game.ChessGame;
 import gui.controller.GUIController;
@@ -16,36 +17,28 @@ import java.awt.event.MouseEvent;
 class NorthPane extends JMenuBar{
 
     NorthPane(){
+
         JMenu actions = new JMenu("Actions");
-        JMenu games = new JMenu("Games");
-        JMenuItem chess = new JMenuItem("Chess");
-        chess.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GUIController.setGame(new ChessGame());
-            }
-        });
         JMenuItem undo = new JMenuItem("Undo Move");
-        undo.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                GameController.undoMove();
-            }
-        });
         JMenuItem redo = new JMenuItem("Redo Move");
-        redo.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                GameController.redoMove();
-            }
-        });
+        JMenuItem reset = new JMenuItem("Reset Board");
+        undo.addActionListener(e -> GameController.undoMove());
+        redo.addActionListener(e -> GameController.redoMove());
+        reset.addActionListener(e -> GameController.resetBoard());
         actions.add(undo);
         actions.add(redo);
+        actions.add(reset);
         add(actions);
+
+        JMenu games = new JMenu("Games");
+        JMenuItem checkers = new JMenuItem("Checkers");
+        JMenuItem chess = new JMenuItem("Chess");
+        chess.addActionListener(e -> GUIController.setGame("chess"));
+        checkers.addActionListener(e -> GUIController.setGame("checkers"));
         games.add(chess);
+        games.add(checkers);
         add(games);
+
         setVisible(true);
     }
 

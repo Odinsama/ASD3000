@@ -45,4 +45,8 @@ public class GameController {
     public static Tile[][] getTiles() {
         return game.getTiles();
     }
+
+    public static void resetBoard() {
+        game.resetBoard();
+    }
 }
