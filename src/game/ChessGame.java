@@ -1,4 +1,4 @@
-package game.logic.chess;
+package game;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.concreteObjects.Chess.ChessBoard;

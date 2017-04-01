@@ -1,5 +1,7 @@
 package gui;
 
+import game.Game;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -18,5 +20,8 @@ class CenterPane extends JPanel{
         setVisible(true);
     }
 
+    public void setGame(Game game) {
+        domainView.setGame(game);
+    }
 }
 
