@@ -18,8 +18,8 @@ public abstract class Board extends JPanel{
         ROWS = boardSize.height;
         TILES = new Tile[COLUMNS][ROWS];
         setLayout(new GridLayout(ROWS, COLUMNS));
-        for (int y = 0; y<boardSize.getWidth(); y++){
-            for (int x = 0; x<boardSize.getHeight(); x++){
+        for (int y = 0; y<COLUMNS; y++){
+            for (int x = 0; x<ROWS; x++){
                 if ((y%2==0 && x%2==0) || y%2==x%2){
                     Tile tile = new Tile(Color.getColor("#e8eff9"));
                     add(tile);
@@ -43,7 +43,6 @@ public abstract class Board extends JPanel{
         //removing the pointer to the Piece for future validation purposes
         //otherwise a check to see if the tile has a PIECE will not return null
         oldTile.setPiece(null);
-
         target.setPiece(origin);
         origin.setHasMoved();
     }

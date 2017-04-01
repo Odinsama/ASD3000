@@ -23,7 +23,7 @@ public abstract class MoveLogic {
 
     protected MoveLogic(Piece piece){
         this.PIECE = piece;
-        DIR = piece.isNorth() ? 1 : -1;
+        DIR = piece.isNorth() ? DOWN : UP;
         TILES = GameController.getTiles();
     }
 
@@ -51,7 +51,7 @@ public abstract class MoveLogic {
 
     //if this safe method hits an array exception the
     // program will just move on to the next direction
-    protected void getValidDirectionalMovesSafely(int xIncrement, int yIncrement) {
+    protected void setIncrementalDirectionalMovesSafely(int xIncrement, int yIncrement) {
         try{
             //start the sequence one tile away from the
             // origin so it does not check itself as a valid move

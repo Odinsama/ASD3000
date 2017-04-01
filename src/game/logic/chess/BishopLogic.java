@@ -12,12 +12,13 @@ public class BishopLogic extends MoveLogic {
     }
 
     @Override
+    @SuppressWarnings("Duplicates")
     public void setValidMoves() {
         setPosition();
-        getValidDirectionalMovesSafely(LEFT, UP);
-        getValidDirectionalMovesSafely(RIGHT, DOWN);
-        getValidDirectionalMovesSafely(LEFT, DOWN);
-        getValidDirectionalMovesSafely(RIGHT, UP);
+        setIncrementalDirectionalMovesSafely(LEFT, UP);
+        setIncrementalDirectionalMovesSafely(RIGHT, DOWN);
+        setIncrementalDirectionalMovesSafely(LEFT, DOWN);
+        setIncrementalDirectionalMovesSafely(RIGHT, UP);
         highlightValidMoves();
     }
 }
