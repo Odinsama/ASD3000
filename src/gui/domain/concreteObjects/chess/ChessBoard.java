@@ -1,9 +1,10 @@
-package gui.domain.concreteObjects.Chess;
+package gui.domain.concreteObjects.chess;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
 
 import java.awt.*;
+import java.util.List;
 
 /**
  * Created by Odin on 2/13/2017.
@@ -16,12 +17,13 @@ public class ChessBoard extends Board {
     @Override
     public void generatePieces() {
         ChessSet chessSet = new ChessSet();
+        List<Piece> pieces = chessSet.getChessPieces();
         int i = 0;
         for (int y = 0; y < COLUMNS; y++) {
             for (int x = 0; x < ROWS; x++){
-                if (chessSet.get(i)!=null) {
-                    TILES[x][y].setPiece((Piece)chessSet.get(i));
-                    TILES[x][y].add((Piece) chessSet.get(i));
+                if (pieces.get(i)!=null) {
+                    TILES[x][y].setPiece(pieces.get(i));
+                    TILES[x][y].add(pieces.get(i));
                 }
                 i++;
             }

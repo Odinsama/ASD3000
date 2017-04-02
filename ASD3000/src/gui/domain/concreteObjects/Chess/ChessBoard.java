@@ -1,4 +1,4 @@
-package gui.domain.concreteObjects.Chess;
+package gui.domain.concreteObjects.chess;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;

@@ -1,6 +1,6 @@
 package game.logic.chess;
 
-import gui.domain.concreteObjects.Chess.Pieces.Knight;
+import gui.domain.concreteObjects.chess.Pieces.Knight;
 import game.logic.MoveLogic;
 
 /**

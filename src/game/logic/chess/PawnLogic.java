@@ -1,6 +1,6 @@
 package game.logic.chess;
 
-import gui.domain.concreteObjects.Chess.Pieces.Pawn;
+import gui.domain.concreteObjects.chess.Pieces.Pawn;
 import game.logic.MoveLogic;
 import gui.domain.concreteObjects.Tile;
 
@@ -18,8 +18,6 @@ public class PawnLogic extends MoveLogic {
     public void setValidMoves() {
         setPosition();
         addMoveSafely(0 , DIR);
-        System.out.println(PIECE.getMovesMade());
-        System.out.println(PIECE.getMovesMade() == 0 && !TILES[x][y + DIR].isOccupied());
         if (PIECE.getMovesMade() == 0 && !TILES[x][y + DIR].isOccupied()) {
             addMoveSafely(0,DIR*2);
         }

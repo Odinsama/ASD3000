@@ -1,4 +1,4 @@
-package gui.domain.concreteObjects.Chess.Pieces;
+package gui.domain.concreteObjects.chess.Pieces;
 
 import gui.domain.abstractObjects.Piece;
 import names.PieceType;

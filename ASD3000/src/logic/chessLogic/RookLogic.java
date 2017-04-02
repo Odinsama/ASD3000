@@ -1,7 +1,7 @@
 package game.logic.chess;
 
 import game.MoveLogic;
-import gui.domain.concreteObjects.Chess.Pieces.Rook;
+import gui.domain.concreteObjects.chess.Pieces.Rook;
 
 /**
  * Created by Odin on 3/26/2017.

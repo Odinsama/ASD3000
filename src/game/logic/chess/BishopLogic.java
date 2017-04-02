@@ -1,6 +1,6 @@
 package game.logic.chess;
 
-import gui.domain.concreteObjects.Chess.Pieces.Bishop;
+import gui.domain.concreteObjects.chess.Pieces.Bishop;
 import game.logic.MoveLogic;
 
 /**

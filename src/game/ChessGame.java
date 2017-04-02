@@ -1,8 +1,7 @@
 package game;
 
 import gui.domain.abstractObjects.Board;
-import gui.domain.concreteObjects.Chess.ChessBoard;
-import game.Game;
+import gui.domain.concreteObjects.chess.ChessBoard;
 
 
 import java.awt.*;

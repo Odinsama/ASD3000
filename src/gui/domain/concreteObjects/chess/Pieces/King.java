@@ -1,4 +1,4 @@
-package gui.domain.concreteObjects.Chess.Pieces;
+package gui.domain.concreteObjects.chess.Pieces;
 
 import game.logic.chess.KingLogic;
 import gui.domain.abstractObjects.Piece;

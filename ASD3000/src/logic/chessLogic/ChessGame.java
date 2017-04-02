@@ -2,7 +2,7 @@ package game.logic.chess;
 
 import game.Game;
 import gui.domain.abstractObjects.Board;
-import gui.domain.concreteObjects.Chess.ChessBoard;
+import gui.domain.concreteObjects.chess.ChessBoard;
 
 /**
  * Created by Odin on 2/14/2017.

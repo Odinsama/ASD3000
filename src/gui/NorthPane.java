@@ -32,7 +32,7 @@ class NorthPane extends JMenuBar{
 
         JMenu games = new JMenu("Games");
         JMenuItem checkers = new JMenuItem("Checkers");
-        JMenuItem chess = new JMenuItem("Chess");
+        JMenuItem chess = new JMenuItem("chess");
         chess.addActionListener(e -> GUIController.setGame("chess"));
         checkers.addActionListener(e -> GUIController.setGame("checkers"));
         games.add(chess);
