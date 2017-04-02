@@ -1,6 +1,6 @@
 package gui.domain.abstractObjects;
 
-import game.GameController;
+import game.controller.GameController;
 import game.logic.MoveLogic;
 import gui.domain.concreteObjects.Tile;
 

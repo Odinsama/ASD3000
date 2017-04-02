@@ -1,13 +1,13 @@
 package game.logic.chess;
 
-import gui.domain.concreteObjects.chess.Pieces.King;
 import game.logic.MoveLogic;
+import gui.domain.abstractObjects.Piece;
 
 /**
  * Created by Odin on 3/29/2017.
  */
 public class KingLogic extends MoveLogic {
-    public KingLogic(King king) {
+    public KingLogic(Piece king) {
         super(king);
     }
 

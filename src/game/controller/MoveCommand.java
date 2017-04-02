@@ -1,37 +1,36 @@
-package game;
+package game.controller;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
 
 /**
- * Created by Odin on 3/12/2017.
+ * Created by Odin on 2/27/2017.
  */
-public class CaptureCommand implements Command {
-    private final Piece captured;
-    private final Piece movingPiece;
+public class MoveCommand implements Command {
+
     private final Board board;
+    private final Piece movingPiece;
     private final Tile target;
     private final Tile origin;
 
-    CaptureCommand(Board board, Piece movingPiece, Piece captured) {
+    public MoveCommand(Board board, Piece movingPiece, Tile target){
         this.board = board;
         this.movingPiece = movingPiece;
-        this.captured = captured;
-        this.target = (Tile)captured.getParent();
-        this.origin = (Tile)movingPiece.getParent();
+        origin = (Tile) movingPiece.getParent();
+        this.target = target;
     }
 
     @Override
     public void execute() {
-        board.capturePiece(origin,captured, movingPiece, target);
+        board.movePiece(origin, movingPiece, target);
         board.repaint();
         movingPiece.setMovesMade(+1);
     }
 
     @Override
     public void undo() {
-        board.undoCapture(target, movingPiece, captured, origin);
+        board.movePiece(target, movingPiece, origin);
         board.repaint();
         movingPiece.setMovesMade(-1);
     }

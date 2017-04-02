@@ -1,7 +1,9 @@
-package game;
+package game.controller;
 
+import game.collection.Game;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
+import gui.domain.utils.Promotable;
 
 /**
  * Created by Odin on 3/13/2017.
@@ -48,5 +50,9 @@ public class GameController {
 
     public static void resetBoard() {
         game.resetBoard();
+    }
+
+    public static void promote(Promotable piece) {
+        game.promote(piece);
     }
 }

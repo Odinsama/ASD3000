@@ -1,7 +1,9 @@
 package gui.domain.concreteObjects.chess.Pieces;
 
+import game.controller.GameController;
 import game.logic.chess.PawnLogic;
 import gui.domain.abstractObjects.Piece;
+import gui.domain.utils.Promotable;
 
 import javax.imageio.ImageIO;
 import java.io.IOException;
@@ -10,7 +12,7 @@ import java.net.URL;
 /**
  * Created by Odin on 2/12/2017.
  */
-public class Pawn extends Piece {
+public class Pawn extends Piece implements Promotable{
 
 
     public Pawn(Boolean isNorth) {
@@ -29,4 +31,8 @@ public class Pawn extends Piece {
 
     }
 
+    @Override
+    public void promote() {
+        GameController.promote(this);
+    }
 }

@@ -2,13 +2,14 @@ package gui.domain.concreteObjects.checkers;
 
 import game.logic.checkers.MenLogic;
 import gui.domain.abstractObjects.Piece;
+import gui.domain.utils.Promotable;
 
 import java.awt.*;
 
 /**
  * Created by Odin on 4/1/2017.
  */
-class Men extends Piece {
+class Men extends Piece implements Promotable {
 
     private boolean isKing = false;
 
@@ -29,6 +30,7 @@ class Men extends Piece {
     }
 
     public void promote(){
+        moveLogic = new KingLogic(this);
         isKing = true;
         repaint();
     }

@@ -1,7 +1,8 @@
-package game;
+package game.collection;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.concreteObjects.chess.ChessBoard;
+import gui.domain.utils.Promotable;
 
 
 import java.awt.*;
@@ -9,9 +10,14 @@ import java.awt.*;
 /**
  * Created by Odin on 2/14/2017.
  */
-public class ChessGame extends Game {
+public class Chess extends Game {
     @Override
     public Board generateBoard() {
         return new ChessBoard(new Dimension(8,8));
+    }
+
+    @Override
+    public void promote(Promotable piece) {
+
     }
 }

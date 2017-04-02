@@ -1,4 +1,4 @@
-package game;
+package game.controller;
 
 /**
  * Created by Odin on 3/1/2017.

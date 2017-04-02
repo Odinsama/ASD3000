@@ -1,9 +1,9 @@
 package gui;
 
-import game.GameCenter;
-import game.GameController;
+import game.collection.GameCenter;
+import game.controller.GameController;
 import gui.domain.abstractObjects.Board;
-import game.Game;
+import game.collection.Game;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

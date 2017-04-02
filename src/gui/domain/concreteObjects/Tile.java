@@ -1,6 +1,6 @@
 package gui.domain.concreteObjects;
 
-import game.GameController;
+import game.controller.GameController;
 import gui.domain.abstractObjects.Piece;
 
 import javax.swing.*;

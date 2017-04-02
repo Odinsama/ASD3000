@@ -1,6 +1,6 @@
 package gui.controller;
 
-import game.GameController;
+import game.controller.GameController;
 
 import java.util.HashMap;
 import java.util.Map;

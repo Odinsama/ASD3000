@@ -1,8 +1,12 @@
-package game;
+package game.collection;
 
+import game.controller.CaptureCommand;
+import game.controller.Command;
+import game.controller.MoveCommand;
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
+import gui.domain.utils.Promotable;
 
 import java.awt.*;
 import java.util.Stack;
@@ -12,7 +16,7 @@ import java.util.Stack;
  */
 public abstract class Game {
 
-    private Board board;
+    protected Board board;
     private Stack<Command> commands = new Stack<>();
     private Stack<Command> undoneCommands = new Stack<>();
     private Piece origin;
@@ -44,7 +48,7 @@ public abstract class Game {
         northsTurn = !northsTurn;
     }
 
-    void undoMove() {
+    public void undoMove() {
         if (commands.isEmpty())return;
         Command undoCommand = commands.pop();
         undoCommand.undo();
@@ -52,7 +56,7 @@ public abstract class Game {
         northsTurn = !northsTurn;
     }
 
-    void redoMove() {
+    public void redoMove() {
         if (undoneCommands.isEmpty())return;
         Command command = undoneCommands.pop();
         commands.add(command);
@@ -60,7 +64,7 @@ public abstract class Game {
         northsTurn = !northsTurn;
     }
 
-    void resetBoard(){
+    public void resetBoard(){
         while (!commands.isEmpty()){
             undoMove();
         }
@@ -72,11 +76,11 @@ public abstract class Game {
         originTile.highlight(Color.yellow);
     }
 
-    boolean isNorthsTurn() {
+    public boolean isNorthsTurn() {
         return northsTurn;
     }
 
-    void capture(Piece target) {
+    public void capture(Piece target) {
         CaptureCommand captureCommand = new CaptureCommand(board, origin, target);
         commands.add(captureCommand);
         undoneCommands.clear();
@@ -92,5 +96,5 @@ public abstract class Game {
         return board.getTiles();
     }
 
-
+    public abstract void promote(Promotable piece);
 }

@@ -1,4 +1,4 @@
-package game;
+package game.collection;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,9 +11,9 @@ public class GameCenter {
     private Map<String, Game> games = new HashMap<>();
 
     public GameCenter(){
-        ChessGame chessGame = new ChessGame();
+        Chess chessGame = new Chess();
         games.put("chess", chessGame);
-        CheckersGame checkersGame = new CheckersGame();
+        Checkers checkersGame = new Checkers();
         games.put("checkers", checkersGame);
     }
 
