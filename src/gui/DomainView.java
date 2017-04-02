@@ -32,7 +32,6 @@ class DomainView extends JPanel {
         currentGame = games.getGame(game);
         GameController.initGame(currentGame);
         board = currentGame.openGame();
-        board.generatePieces();
         add(board);
         revalidate();
         repaint();

@@ -8,12 +8,13 @@ import java.util.Map;
  */
 public class GameCenter {
 
-
     private Map<String, Game> games = new HashMap<>();
 
     public GameCenter(){
-        games.put("chess", new ChessGame());
-        games.put("checkers", new CheckersGame());
+        ChessGame chessGame = new ChessGame();
+        games.put("chess", chessGame);
+        CheckersGame checkersGame = new CheckersGame();
+        games.put("checkers", checkersGame);
     }
 
     public Game getGame(String game) {

@@ -16,7 +16,7 @@ public abstract class Piece extends JComponent {
 
     private final Boolean isNorth;
     protected Image image;
-    public boolean hasMoved = false;
+    public int movesMade = 0;
     protected MoveLogic moveLogic;
 
     //within the anonymous mousePressed event
@@ -57,11 +57,11 @@ public abstract class Piece extends JComponent {
 
     }
 
-    void setHasMoved(){
-        hasMoved = true;
+    public void setMovesMade(int increment){
+        movesMade+=increment;
     }
 
-    protected boolean hasMoved(){
-        return hasMoved;
+    public int getMovesMade(){
+        return movesMade;
     }
 }

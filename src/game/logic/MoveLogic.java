@@ -34,10 +34,6 @@ public abstract class MoveLogic {
 
     public abstract void setValidMoves();
 
-    protected boolean checkIfEmpty(Tile tile) {
-        return tile.getPiece()==null;
-    }
-
     protected void highlightMove(Tile tile){
         tile.highlight(Color.cyan);
     }
@@ -57,7 +53,7 @@ public abstract class MoveLogic {
             // origin so it does not check itself as a valid move
             x += xIncrement;
             y += yIncrement;
-            while (TILES[x][y].getPiece() == null) {
+            while (!TILES[x][y].isOccupied()) {
                 moves.add(TILES[x][y]);
                 x += xIncrement;
                 y += yIncrement;
@@ -65,7 +61,7 @@ public abstract class MoveLogic {
         }catch (ArrayIndexOutOfBoundsException ignored){}
         finally {
             try{
-                if (TILES[x][y].getPiece() != null){
+                if (TILES[x][y].isOccupied()){
                     captures.add(TILES[x][y]);
                 }
             }catch (ArrayIndexOutOfBoundsException ignored){}
@@ -82,7 +78,7 @@ public abstract class MoveLogic {
     }
     protected void sortMoveOrCaptureSafely(int xIncrement, int yIncrement){
         try {
-            if (TILES[x + xIncrement][y + yIncrement].getPiece() == null) {
+            if (!TILES[x + xIncrement][y + yIncrement].isOccupied()) {
                 addMoveSafely(xIncrement, yIncrement);
             } else addCaptureSafely(xIncrement, yIncrement);
         }catch (ArrayIndexOutOfBoundsException ignored){}
@@ -90,10 +86,11 @@ public abstract class MoveLogic {
 
     protected void addMoveSafely(int xIncrement, int yIncrement) {
         try{
-            if (TILES[x + xIncrement][y + yIncrement].getPiece() == null) {
+            if (!TILES[x + xIncrement][y + yIncrement].isOccupied()) {
                 moves.add(TILES[x + xIncrement][y + yIncrement]);
             }
-        }catch (ArrayIndexOutOfBoundsException ignored){}
+        }catch (ArrayIndexOutOfBoundsException ignored){
+        }
     }
 
     protected void addCaptureSafely(int xIncrement, int yIncrement) {

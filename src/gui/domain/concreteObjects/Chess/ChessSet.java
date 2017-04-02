@@ -11,7 +11,7 @@ import java.util.Collections;
  */
 class ChessSet extends ArrayList {
     ChessSet(){
-        Piece[] chessPieces = new Piece[]{
+        final Piece[] chessPieces = new Piece[]{
 
                 new Rook(true), new Knight(true), new Bishop(true), new Queen(true), new King(true), new Bishop(true), new Knight(true), new Rook(true),
                 new Pawn(true), new Pawn(true), new Pawn(true), new Pawn(true), new Pawn(true), new Pawn(true), new Pawn(true), new Pawn(true),

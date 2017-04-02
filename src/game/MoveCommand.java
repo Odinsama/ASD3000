@@ -10,26 +10,28 @@ import gui.domain.concreteObjects.Tile;
 public class MoveCommand implements Command {
 
     private final Board board;
-    private final Piece origin;
+    private final Piece movingPiece;
     private final Tile target;
-    private final Tile oldTile;
+    private final Tile origin;
 
-    public MoveCommand(Board board, Piece origin, Tile target){
+    MoveCommand(Board board, Piece movingPiece, Tile target){
         this.board = board;
-        this.origin = origin;
-        oldTile = (Tile) origin.getParent();
+        this.movingPiece = movingPiece;
+        origin = (Tile) movingPiece.getParent();
         this.target = target;
     }
 
     @Override
     public void execute() {
-        board.movePiece(target, origin, oldTile);
+        board.movePiece(origin, movingPiece, target);
         board.repaint();
+        movingPiece.setMovesMade(+1);
     }
 
     @Override
     public void undo() {
-        board.movePiece(oldTile, origin, oldTile);
+        board.movePiece(target, movingPiece, origin);
         board.repaint();
+        movingPiece.setMovesMade(-1);
     }
 }

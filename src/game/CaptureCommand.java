@@ -9,28 +9,30 @@ import gui.domain.concreteObjects.Tile;
  */
 public class CaptureCommand implements Command {
     private final Piece captured;
-    private final Piece origin;
+    private final Piece movingPiece;
     private final Board board;
     private final Tile target;
-    private final Tile oldTile;
+    private final Tile origin;
 
-    CaptureCommand(Board board, Piece origin, Piece captured) {
+    CaptureCommand(Board board, Piece movingPiece, Piece captured) {
         this.board = board;
-        this.origin = origin;
+        this.movingPiece = movingPiece;
         this.captured = captured;
         this.target = (Tile)captured.getParent();
-        this.oldTile = (Tile)origin.getParent();
+        this.origin = (Tile)movingPiece.getParent();
     }
 
     @Override
     public void execute() {
-        board.capturePiece(target,captured,origin,oldTile);
+        board.capturePiece(origin,captured, movingPiece, target);
         board.repaint();
+        movingPiece.setMovesMade(+1);
     }
 
     @Override
     public void undo() {
-        board.undoCapture(target,captured,oldTile, origin);
+        board.undoCapture(target, movingPiece, captured, origin);
         board.repaint();
+        movingPiece.setMovesMade(-1);
     }
 }

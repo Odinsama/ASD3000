@@ -21,7 +21,9 @@ public abstract class Game {
 
     private Board startGame(){
         hasBegun = true;
-        return board = generateBoard();
+        board = generateBoard();
+        board.generatePieces();
+        return board;
     }
 
     public Board openGame() {

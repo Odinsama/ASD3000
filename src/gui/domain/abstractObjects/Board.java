@@ -36,25 +36,25 @@ public abstract class Board extends JPanel{
     public abstract void generatePieces();
 
 
-    public void movePiece(Tile target, Piece origin, Tile oldTile){
+    public void movePiece(Tile origin, Piece movingPiece,  Tile target){
         //removing the pointer to the Piece for future validation purposes
         //otherwise a check to see if the tile has a PIECE will not return null
-        oldTile.setPiece(null);
-        target.setPiece(origin);
-        origin.setHasMoved();
+        origin.setPiece(null);
+        target.setPiece(movingPiece);
     }
 
-    public void capturePiece(Tile target, Piece captured, Piece origin, Tile oldTile){
-        oldTile.setPiece(null);
+    public void capturePiece(Tile origin, Piece captured, Piece movingPiece, Tile target){
+        origin.setPiece(null);
         target.remove(captured);
-        target.setPiece(origin);
-        origin.setHasMoved();
+        target.setPiece(movingPiece);
+        movingPiece.setMovesMade(+1);
     }
 
-    public void undoCapture(Tile target, Piece captured, Tile oldTile, Piece origin) {
+    public void undoCapture(Tile target, Piece movingPiece, Piece captured, Tile origin) {
         target.add(captured);
-        System.out.println(oldTile.getPos());
-        oldTile.add(origin);
+        System.out.println(origin.getPos());
+        origin.add(movingPiece);
+        movingPiece.setMovesMade(-1);
     }
 
     public void clearHighlights() {

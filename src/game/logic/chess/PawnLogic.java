@@ -2,6 +2,7 @@ package game.logic.chess;
 
 import gui.domain.concreteObjects.Chess.Pieces.Pawn;
 import game.logic.MoveLogic;
+import gui.domain.concreteObjects.Tile;
 
 
 /**
@@ -17,10 +18,10 @@ public class PawnLogic extends MoveLogic {
     public void setValidMoves() {
         setPosition();
         addMoveSafely(0 , DIR);
-
-        //first move checking if it can move two steps forward
-        if (!PIECE.hasMoved && TILES[x][y + DIR].getPiece()==null && TILES[x][y + 2 * DIR].getPiece()==null) {
-            moves.add(TILES[x][y + 2* DIR]);
+        System.out.println(PIECE.getMovesMade());
+        System.out.println(PIECE.getMovesMade() == 0 && !TILES[x][y + DIR].isOccupied());
+        if (PIECE.getMovesMade() == 0 && !TILES[x][y + DIR].isOccupied()) {
+            addMoveSafely(0,DIR*2);
         }
         addCaptureSafely(DIR, DIR);
         addCaptureSafely(-DIR, DIR);
@@ -30,10 +31,10 @@ public class PawnLogic extends MoveLogic {
     @Override
     protected void highlightValidMoves() {
         moves.stream()
-                .filter(this::checkIfEmpty)
+                .filter(tile -> !tile.isOccupied())
                 .forEach(this::highlightMove);
         captures.stream()
-                .filter(tile-> !checkIfEmpty(tile))
+                .filter(Tile::isOccupied)
                 .forEach(this::highlightCapture);
         moves.clear();
         captures.clear();
