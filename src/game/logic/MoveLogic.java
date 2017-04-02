@@ -20,6 +20,7 @@ public abstract class MoveLogic {
     protected int x,y;
     protected List<Tile> moves = new ArrayList<>();
     protected List<Tile> captures = new ArrayList<>();
+    protected List<Tile> skipCaptures = new ArrayList<>();
 
     protected MoveLogic(Piece piece){
         this.PIECE = piece;
@@ -97,6 +98,13 @@ public abstract class MoveLogic {
         try{
             if (TILES[x + xIncrement][y + yIncrement].getPiece() != null)
             captures.add(TILES[x + xIncrement][y + yIncrement]);
+        }catch (ArrayIndexOutOfBoundsException ignored){}
+    }
+
+    protected void addSkipCaptureSafely(int xIncrement, int yIncrement){
+        try{
+            if (TILES[x + xIncrement][y + yIncrement].getPiece() != null && TILES[x + xIncrement*2][y + yIncrement*2].getPiece() == null)
+                skipCaptures.add(TILES[x + xIncrement*2][y + yIncrement*2]);
         }catch (ArrayIndexOutOfBoundsException ignored){}
     }
 

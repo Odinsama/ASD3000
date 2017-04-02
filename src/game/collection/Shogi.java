@@ -2,7 +2,7 @@ package game.collection;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.concreteObjects.shogi.ShogiBoard;
-import gui.domain.utils.Promotable;
+import gui.domain.utils.IPromotable;
 
 import java.awt.*;
 
@@ -17,6 +17,6 @@ public class Shogi extends Game {
     }
 
     @Override
-    public void promote(Promotable piece) {
+    public void promote(IPromotable piece) {
     }
 }

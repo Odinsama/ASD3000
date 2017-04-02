@@ -1,4 +1,4 @@
-package gui.domain.concreteObjects.shogi;
+package gui.domain.concreteObjects.shogi.pieces;
 
 import game.logic.shogi.FuHyouLogic;
 
@@ -6,8 +6,8 @@ import game.logic.shogi.FuHyouLogic;
  * Created by Odin on 4/2/2017.
  */
 public class FuHyou extends ShogiPiece {
-    public FuHyou(Boolean isNorth, String pieceName) {
-        super(isNorth, pieceName);
+    public FuHyou(Boolean isNorth) {
+        super(isNorth, "歩兵");
         moveLogic = new FuHyouLogic(this);
     }
 }

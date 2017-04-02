@@ -6,7 +6,7 @@ import game.controller.MoveCommand;
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
-import gui.domain.utils.Promotable;
+import gui.domain.utils.IPromotable;
 
 import java.awt.*;
 import java.util.Stack;
@@ -96,5 +96,5 @@ public abstract class Game {
         return board.getTiles();
     }
 
-    public abstract void promote(Promotable piece);
+    public abstract void promote(IPromotable piece);
 }

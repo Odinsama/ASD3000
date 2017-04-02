@@ -17,7 +17,7 @@ public class PawnLogic extends MoveLogic {
     @Override
     public void setValidMoves() {
         setPosition();
-        addMoveSafely(0 , DIR);
+        addMoveSafely(NONE , DIR);
         if (PIECE.getMovesMade() == 0 && !TILES[x][y + DIR].isOccupied()) {
             addMoveSafely(0,DIR*2);
         }

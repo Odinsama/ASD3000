@@ -1,7 +1,7 @@
 package gui.domain.concreteObjects.chess.Pieces;
 
 import gui.domain.abstractObjects.Piece;
-import game.logic.chess.BishopLogic;
+import game.logic.shared.BishopLogic;
 
 import javax.imageio.ImageIO;
 import java.io.IOException;

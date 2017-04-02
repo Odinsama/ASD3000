@@ -17,7 +17,7 @@ public class ChessBoard extends Board {
     @Override
     public void generatePieces() {
         ChessSet chessSet = new ChessSet();
-        List<Piece> pieces = chessSet.getChessPieces();
+        List<Piece> pieces = chessSet.getPieces();
         int i = 0;
         for (int y = 0; y < COLUMNS; y++) {
             for (int x = 0; x < ROWS; x++){

@@ -1,13 +1,13 @@
-package game.logic.chess;
+package game.logic.shared;
 
-import gui.domain.concreteObjects.chess.Pieces.Bishop;
 import game.logic.MoveLogic;
+import gui.domain.abstractObjects.Piece;
 
 /**
  * Created by Odin on 3/29/2017.
  */
 public class BishopLogic extends MoveLogic {
-    public BishopLogic(Bishop bishop) {
+    public BishopLogic(Piece bishop) {
         super(bishop);
     }
 

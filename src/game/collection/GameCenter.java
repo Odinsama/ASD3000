@@ -11,10 +11,16 @@ public class GameCenter {
     private Map<String, Game> games = new HashMap<>();
 
     public GameCenter(){
-        Chess chessGame = new Chess();
-        games.put("chess", chessGame);
-        Checkers checkersGame = new Checkers();
-        games.put("checkers", checkersGame);
+
+        Checkers checkers = new Checkers();
+        games.put("checkers", checkers);
+
+        Chess chess = new Chess();
+        games.put("chess", chess);
+
+        Shogi shogi = new Shogi();
+        games.put("shogi", shogi);
+
     }
 
     public Game getGame(String game) {

@@ -18,6 +18,10 @@ public class MenLogic extends MoveLogic {
         addMoveSafely(RIGHT, DOWN);
         addMoveSafely(LEFT, DOWN);
         addMoveSafely(RIGHT, UP);
+        addSkipCaptureSafely(LEFT, UP);
+        addSkipCaptureSafely(RIGHT, DOWN);
+        addSkipCaptureSafely(LEFT, DOWN);
+        addSkipCaptureSafely(RIGHT, UP);
         highlightValidMoves();
     }
 }

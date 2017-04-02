@@ -3,7 +3,7 @@ package game.controller;
 import game.collection.Game;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
-import gui.domain.utils.Promotable;
+import gui.domain.utils.IPromotable;
 
 /**
  * Created by Odin on 3/13/2017.
@@ -52,7 +52,7 @@ public class GameController {
         game.resetBoard();
     }
 
-    public static void promote(Promotable piece) {
+    public static void promote(IPromotable piece) {
         game.promote(piece);
     }
 }

@@ -2,7 +2,7 @@ package game.collection;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.concreteObjects.checkers.CheckersBoard;
-import gui.domain.utils.Promotable;
+import gui.domain.utils.IPromotable;
 
 import java.awt.*;
 
@@ -16,7 +16,7 @@ public class Checkers extends Game {
     }
 
     @Override
-    public void promote(Promotable piece) {
+    public void promote(IPromotable piece) {
 
     }
 }

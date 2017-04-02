@@ -2,7 +2,7 @@ package game.collection;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.concreteObjects.chess.ChessBoard;
-import gui.domain.utils.Promotable;
+import gui.domain.utils.IPromotable;
 
 
 import java.awt.*;
@@ -17,7 +17,7 @@ public class Chess extends Game {
     }
 
     @Override
-    public void promote(Promotable piece) {
+    public void promote(IPromotable piece) {
 
     }
 }

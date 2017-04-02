@@ -1,4 +1,4 @@
-package game.logic.chess;
+package game.logic.shared;
 
 import game.logic.MoveLogic;
 import gui.domain.abstractObjects.Piece;

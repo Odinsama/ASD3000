@@ -1,5 +1,6 @@
-package game.logic.chess;
+package game.logic.shared;
 
+import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.chess.Pieces.Rook;
 import game.logic.MoveLogic;
 
@@ -7,7 +8,7 @@ import game.logic.MoveLogic;
  * Created by Odin on 3/26/2NONE17.
  */
 public class RookLogic extends MoveLogic {
-    public RookLogic(Rook rook) {
+    public RookLogic(Piece rook) {
         super(rook);
     }
 

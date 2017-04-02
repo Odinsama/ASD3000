@@ -14,7 +14,7 @@ public class FuHyouLogic extends MoveLogic {
     @Override
     public void setValidMoves() {
         setPosition();
-        addMoveSafely(NONE,UP*DIR);
+        sortMoveOrCaptureSafely(NONE,DIR);
         highlightValidMoves();
     }
 }

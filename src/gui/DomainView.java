@@ -40,6 +40,7 @@ class DomainView extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        if (board != null)return;
         try {
             Image gamePlaceholder = ImageIO.read(new File("res/GamePlaceholder.png"));
             g.drawImage(gamePlaceholder, getX(),getY(),getWidth(),getHeight(),null);
