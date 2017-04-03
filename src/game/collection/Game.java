@@ -6,7 +6,7 @@ import game.controller.MoveCommand;
 import game.controller.SkipCaptureCommand;
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
-import gui.domain.concreteObjects.Tile;
+import gui.domain.abstractObjects.Tile;
 import gui.domain.utils.IPromotable;
 
 import java.awt.*;
@@ -63,7 +63,7 @@ public abstract class Game {
         Dimension originPos = origin.getPos(), targetPos = target.getPos();
         Tile capturedTile = tiles[(originPos.width+targetPos.width)/2][(originPos.height+targetPos.height)/2];
         Piece capturedPiece = capturedTile.getPiece();
-        SkipCaptureCommand skipCaptureCommand = new SkipCaptureCommand(new MoveCommand(board, movingPiece, target), new CaptureCommand(board, movingPiece, capturedPiece));
+        SkipCaptureCommand skipCaptureCommand = new SkipCaptureCommand(new MoveCommand(board, movingPiece, capturedTile, target), new CaptureCommand(board, movingPiece, capturedPiece));
         commands.add(skipCaptureCommand);
         undoneCommands.clear();
         skipCaptureCommand.execute();

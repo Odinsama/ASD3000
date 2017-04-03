@@ -2,6 +2,7 @@ package gui.domain.concreteObjects.chess;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
+import gui.domain.abstractObjects.Tile;
 
 import java.awt.*;
 import java.util.List;
@@ -15,6 +16,12 @@ public class ChessBoard extends Board {
     }
 
     @Override
+    protected Tile generateTile(Color tileColor) {
+        return new ChessTile(tileColor);
+    }
+
+    @Override
+    @SuppressWarnings("Duplicates")
     public void generatePieces() {
         ChessSet chessSet = new ChessSet();
         List<Piece> pieces = chessSet.getPieces();

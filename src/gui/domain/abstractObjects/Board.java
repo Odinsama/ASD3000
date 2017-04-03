@@ -1,7 +1,5 @@
 package gui.domain.abstractObjects;
 
-import gui.domain.concreteObjects.Tile;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -22,8 +20,8 @@ public abstract class Board extends JPanel{
             for (int x = 0; x<ROWS; x++){
                 Tile tile;
                 if ((x%2==0 && y%2==0) || x%2 == y%2){
-                    tile = new Tile(tileColor1);
-                }else {tile = new Tile(tileColor2);}
+                    tile = generateTile(tileColor1);
+                }else {tile = generateTile(tileColor2);}
                 add(tile);
                 tile.setPos(x, y);
                 TILES[x][y]=tile;
@@ -32,6 +30,8 @@ public abstract class Board extends JPanel{
 
 
     }
+
+    protected abstract Tile generateTile(Color tileColor);
 
     public abstract void generatePieces();
 

@@ -2,7 +2,7 @@ package game.controller;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
-import gui.domain.concreteObjects.Tile;
+import gui.domain.abstractObjects.Tile;
 
 /**
  * Created by Odin on 2/27/2017.
@@ -18,6 +18,12 @@ public class MoveCommand implements Command {
         this.board = board;
         this.movingPiece = movingPiece;
         origin = (Tile) movingPiece.getParent();
+        this.target = target;
+    }
+    public MoveCommand(Board board, Piece movingPiece, Tile origin, Tile target){
+        this.board = board;
+        this.movingPiece = movingPiece;
+        this.origin = origin;
         this.target = target;
     }
 

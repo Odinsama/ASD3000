@@ -2,7 +2,7 @@ package game.logic.chess;
 
 import gui.domain.concreteObjects.chess.Pieces.Pawn;
 import game.logic.MoveLogic;
-import gui.domain.concreteObjects.Tile;
+import gui.domain.abstractObjects.Tile;
 
 
 /**
@@ -21,9 +21,15 @@ public class PawnLogic extends MoveLogic {
         if (PIECE.getMovesMade() == 0 && !TILES[x][y + DIR].isOccupied()) {
             addMoveSafely(0,DIR*2);
         }
-        addCaptureSafely(DIR, DIR);
-        addCaptureSafely(-DIR, DIR);
+        addCaptureSafely(LEFT, DIR);
+        addCaptureSafely(RIGHT, DIR);
+        addUnPassantSafely(LEFT, DIR);
+        addUnPassantSafely(RIGHT, DIR);
         highlightValidMoves();
+    }
+
+    private void addUnPassantSafely(int left, int dir) {
+        if (PIECE.isNorth() && y == 3 || !PIECE.isNorth() && y == 4){}
     }
 
     @Override

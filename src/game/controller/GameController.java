@@ -2,7 +2,7 @@ package game.controller;
 
 import game.collection.Game;
 import gui.domain.abstractObjects.Piece;
-import gui.domain.concreteObjects.Tile;
+import gui.domain.abstractObjects.Tile;
 import gui.domain.utils.IPromotable;
 
 /**

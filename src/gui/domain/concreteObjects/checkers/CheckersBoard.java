@@ -2,6 +2,7 @@ package gui.domain.concreteObjects.checkers;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
+import gui.domain.abstractObjects.Tile;
 
 import java.awt.*;
 
@@ -11,6 +12,11 @@ import java.awt.*;
 public class CheckersBoard extends Board {
     public CheckersBoard(Dimension dimension) {
         super(dimension, new Color(170, 247, 153), new Color(66, 134, 244));
+    }
+
+    @Override
+    protected Tile generateTile(Color tileColor) {
+        return new CheckersTile(tileColor);
     }
 
     @Override

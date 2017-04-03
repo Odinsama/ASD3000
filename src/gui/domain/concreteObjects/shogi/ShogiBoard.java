@@ -2,6 +2,7 @@ package gui.domain.concreteObjects.shogi;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
+import gui.domain.abstractObjects.Tile;
 
 import java.awt.*;
 import java.util.List;
@@ -12,6 +13,11 @@ import java.util.List;
 public class ShogiBoard extends Board {
     public ShogiBoard(Dimension boardSize, Color tileColor1, Color tileColor2) {
         super(boardSize, tileColor1, tileColor2);
+    }
+
+    @Override
+    protected Tile generateTile(Color tileColor) {
+        return new ShogiTile(tileColor);
     }
 
     @Override

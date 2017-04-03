@@ -2,7 +2,7 @@ package game.logic;
 
 import game.controller.GameController;
 import gui.domain.abstractObjects.Piece;
-import gui.domain.concreteObjects.Tile;
+import gui.domain.abstractObjects.Tile;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -46,11 +46,15 @@ public abstract class MoveLogic {
         }
     }
 
-    protected void highlightSkipCapture(Tile[] tiles){
+    private void highlightSkipCapture(Tile[] tiles){
         Piece highlightPiece = tiles[1].getPiece();
         if (highlightPiece.isNorth() != PIECE.isNorth()) {
-            tiles[0].specialHighlight(Color.orange);
+            tiles[0].specialCaptureHighlight(Color.orange);
         }
+    }
+
+    private void highlightSpecialMove(Tile tile){
+        tile.specialHighlight(Color.blue);
     }
 
 

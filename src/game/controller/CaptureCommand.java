@@ -2,7 +2,7 @@ package game.controller;
 
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
-import gui.domain.concreteObjects.Tile;
+import gui.domain.abstractObjects.Tile;
 
 /**
  * Created by Odin on 3/12/2017.
