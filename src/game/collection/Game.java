@@ -3,6 +3,7 @@ package game.collection;
 import game.controller.CaptureCommand;
 import game.controller.Command;
 import game.controller.MoveCommand;
+import game.controller.SkipCaptureCommand;
 import gui.domain.abstractObjects.Board;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.Tile;
@@ -19,7 +20,7 @@ public abstract class Game {
     protected Board board;
     private Stack<Command> commands = new Stack<>();
     private Stack<Command> undoneCommands = new Stack<>();
-    private Piece origin;
+    private Piece movingPiece;
     private boolean northsTurn = false;
     private boolean hasBegun = false;
 
@@ -41,10 +42,31 @@ public abstract class Game {
     protected abstract Board generateBoard();
 
     public void movePiece(Tile target){
-        MoveCommand moveCommand = new MoveCommand(board, origin, target);
+        MoveCommand moveCommand = new MoveCommand(board, movingPiece, target);
         commands.add(moveCommand);
         undoneCommands.clear();
         moveCommand.execute();
+        northsTurn = !northsTurn;
+    }
+
+    public void capture(Piece target) {
+        CaptureCommand captureCommand = new CaptureCommand(board, movingPiece, target);
+        commands.add(captureCommand);
+        undoneCommands.clear();
+        captureCommand.execute();
+        northsTurn = !northsTurn;
+    }
+
+    public void skipCapture(Tile target) {
+        Tile origin = (Tile) movingPiece.getParent();
+        Tile[][] tiles = board.getTiles();
+        Dimension originPos = origin.getPos(), targetPos = target.getPos();
+        Tile capturedTile = tiles[(originPos.width+targetPos.width)/2][(originPos.height+targetPos.height)/2];
+        Piece capturedPiece = capturedTile.getPiece();
+        SkipCaptureCommand skipCaptureCommand = new SkipCaptureCommand(new MoveCommand(board, movingPiece, target), new CaptureCommand(board, movingPiece, capturedPiece));
+        commands.add(skipCaptureCommand);
+        undoneCommands.clear();
+        skipCaptureCommand.execute();
         northsTurn = !northsTurn;
     }
 
@@ -70,9 +92,9 @@ public abstract class Game {
         }
     }
 
-    public void setOrigin(Piece origin) {
-        this.origin = origin;
-        Tile originTile = (Tile) origin.getParent();
+    public void setMovingPiece(Piece movingPiece) {
+        this.movingPiece = movingPiece;
+        Tile originTile = (Tile) movingPiece.getParent();
         originTile.highlight(Color.yellow);
     }
 
@@ -80,13 +102,7 @@ public abstract class Game {
         return northsTurn;
     }
 
-    public void capture(Piece target) {
-        CaptureCommand captureCommand = new CaptureCommand(board, origin, target);
-        commands.add(captureCommand);
-        undoneCommands.clear();
-        captureCommand.execute();
-        northsTurn = !northsTurn;
-    }
+
 
     public void clearHighlights() {
         board.clearHighlights();
@@ -97,4 +113,5 @@ public abstract class Game {
     }
 
     public abstract void promote(IPromotable piece);
+
 }

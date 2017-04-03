@@ -13,7 +13,7 @@ public class GameController {
     private static Game game;
     
     public static void setOrigin(Piece origin){
-        game.setOrigin(origin);
+        game.setMovingPiece(origin);
     }
 
     public static void movePiece(Tile target) {
@@ -54,5 +54,9 @@ public class GameController {
 
     public static void promote(IPromotable piece) {
         game.promote(piece);
+    }
+
+    public static void skipCapture(Tile tile) {
+        game.skipCapture(tile);
     }
 }

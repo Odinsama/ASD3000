@@ -1,27 +1,33 @@
 package game.logic.checkers;
 
 import gui.domain.abstractObjects.Piece;
+import gui.domain.concreteObjects.checkers.Men;
 import game.logic.MoveLogic;
 
 /**
  * Created by Odin on 4/1/2017.
  */
 public class MenLogic extends MoveLogic {
+    private Men men;
+
     public MenLogic(Piece piece) {
         super(piece);
+        men = (Men) piece;
     }
 
     @Override
     public void setValidMoves() {
         setPosition();
-        addMoveSafely(LEFT, UP);
-        addMoveSafely(RIGHT, DOWN);
-        addMoveSafely(LEFT, DOWN);
-        addMoveSafely(RIGHT, UP);
-        addSkipCaptureSafely(LEFT, UP);
-        addSkipCaptureSafely(RIGHT, DOWN);
-        addSkipCaptureSafely(LEFT, DOWN);
-        addSkipCaptureSafely(RIGHT, UP);
+        addMoveSafely(LEFT, DIR);
+        addMoveSafely(RIGHT, DIR);
+        addSkipCaptureSafely(LEFT, DIR);
+        addSkipCaptureSafely(RIGHT, DIR);
+        if (men.isKing()){
+            addMoveSafely(LEFT, -DIR);
+            addMoveSafely(RIGHT, -DIR);
+            addSkipCaptureSafely(LEFT, -DIR);
+            addSkipCaptureSafely(RIGHT, -DIR);
+        }
         highlightValidMoves();
     }
 }

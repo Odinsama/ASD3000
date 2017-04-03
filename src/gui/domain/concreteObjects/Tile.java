@@ -18,6 +18,7 @@ public class Tile extends JPanel {
     private Dimension tilePos;
     private Tile tile = this;
     private Color highlightColor;
+    private boolean hasSpecialHighlight;
 
     public Tile(Color bg){
         setLayout(new BorderLayout());
@@ -30,6 +31,11 @@ public class Tile extends JPanel {
                     GameController.movePiece(tile);
                     GameController.clearHighlights();
                 }
+                if (hasSpecialHighlight){
+                    GameController.skipCapture(tile);
+                    GameController.clearHighlights();
+                }
+
             }
         });
     }
@@ -50,8 +56,14 @@ public class Tile extends JPanel {
         highlightColor = color;
         repaint();
     }
+    public void specialHighlight(Color color) {
+        hasSpecialHighlight = true;
+        highlightColor = color;
+        repaint();
+    }
 
     public void removeHighlight(){
+        hasSpecialHighlight = false;
         isHighlighted = false;
         repaint();
     }
@@ -66,12 +78,12 @@ public class Tile extends JPanel {
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        if (isHighlighted) {
+        if (isHighlighted || hasSpecialHighlight) {
             g.setColor(highlightColor);
             ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.30f));
             g.fillRect(0, 0, getWidth(), getHeight());
-            g.setColor(Color.black);
         }
+        g.setColor(Color.black);
         g.drawRect(0,0,getWidth()-1,getHeight()-1);
     }
 
@@ -82,4 +94,6 @@ public class Tile extends JPanel {
     public boolean isOccupied() {
         return piece != null;
     }
+
+    
 }

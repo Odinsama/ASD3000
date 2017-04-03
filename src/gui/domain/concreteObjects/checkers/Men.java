@@ -9,7 +9,7 @@ import java.awt.*;
 /**
  * Created by Odin on 4/1/2017.
  */
-class Men extends Piece implements IPromotable {
+public class Men extends Piece implements IPromotable {
 
     private boolean isKing = false;
 
@@ -30,8 +30,11 @@ class Men extends Piece implements IPromotable {
     }
 
     public void promote(){
-        moveLogic = new KingLogic(this);
         isKing = true;
         repaint();
+    }
+
+    public boolean isKing() {
+        return isKing;
     }
 }

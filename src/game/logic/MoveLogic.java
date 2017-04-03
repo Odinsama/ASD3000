@@ -20,7 +20,7 @@ public abstract class MoveLogic {
     protected int x,y;
     protected List<Tile> moves = new ArrayList<>();
     protected List<Tile> captures = new ArrayList<>();
-    protected List<Tile> skipCaptures = new ArrayList<>();
+    private List<Tile[]> skipCaptures = new ArrayList<>();
 
     protected MoveLogic(Piece piece){
         this.PIECE = piece;
@@ -45,6 +45,14 @@ public abstract class MoveLogic {
             tile.highlight(Color.orange);
         }
     }
+
+    protected void highlightSkipCapture(Tile[] tiles){
+        Piece highlightPiece = tiles[1].getPiece();
+        if (highlightPiece.isNorth() != PIECE.isNorth()) {
+            tiles[0].specialHighlight(Color.orange);
+        }
+    }
+
 
     //if this safe method hits an array exception the
     // program will just move on to the next direction
@@ -76,6 +84,8 @@ public abstract class MoveLogic {
         moves.clear();
         captures.forEach(this::highlightCapture);
         captures.clear();
+        skipCaptures.forEach(this::highlightSkipCapture);
+        skipCaptures.clear();
     }
     protected void sortMoveOrCaptureSafely(int xIncrement, int yIncrement){
         try {
@@ -104,7 +114,7 @@ public abstract class MoveLogic {
     protected void addSkipCaptureSafely(int xIncrement, int yIncrement){
         try{
             if (TILES[x + xIncrement][y + yIncrement].getPiece() != null && TILES[x + xIncrement*2][y + yIncrement*2].getPiece() == null)
-                skipCaptures.add(TILES[x + xIncrement*2][y + yIncrement*2]);
+                skipCaptures.add(new Tile[]{ TILES[x + xIncrement*2][y + yIncrement*2], TILES[x + xIncrement][y + yIncrement]});
         }catch (ArrayIndexOutOfBoundsException ignored){}
     }
 
