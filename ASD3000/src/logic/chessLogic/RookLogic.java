@@ -37,7 +37,7 @@ public class RookLogic extends MoveLogic {
             x += xIncrement;
             y += yIncrement;
             while (TILES[x][y].getPiece() == null) {
-                moves.add(TILES[x][y]);
+                TILES[x][y]);
                 x += xIncrement;
                 y += yIncrement;
             }

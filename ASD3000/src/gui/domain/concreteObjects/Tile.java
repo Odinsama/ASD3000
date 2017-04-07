@@ -26,7 +26,6 @@ public class Tile extends JPanel {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                System.out.println(getPos());
                 if (isHighlighted){
                     GameController.movePiece(tile);
                     GameController.clearHighlights();

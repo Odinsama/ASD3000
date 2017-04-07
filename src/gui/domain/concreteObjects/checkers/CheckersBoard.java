@@ -16,7 +16,7 @@ public class CheckersBoard extends Board {
 
     @Override
     protected Tile generateTile(Color tileColor) {
-        return new CheckersTile(tileColor);
+        return new Tile(tileColor);
     }
 
     @Override

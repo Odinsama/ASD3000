@@ -16,6 +16,5 @@ public class KeiMaLogic extends MoveLogic {
         setPosition();
         sortMoveOrCaptureSafely(LEFT, DIR*2);
         sortMoveOrCaptureSafely(RIGHT, DIR*2);
-        highlightValidMoves();
     }
 }

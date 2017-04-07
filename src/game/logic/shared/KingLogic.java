@@ -6,6 +6,7 @@ import gui.domain.abstractObjects.Piece;
 /**
  * Created by Odin on 3/29/2017.
  */
+//used in both Chess and Shogi!
 public class KingLogic extends MoveLogic {
     public KingLogic(Piece king) {
         super(king);
@@ -22,6 +23,5 @@ public class KingLogic extends MoveLogic {
         sortMoveOrCaptureSafely(NONE,DOWN);
         sortMoveOrCaptureSafely(LEFT,NONE);
         sortMoveOrCaptureSafely(NONE,UP);
-        highlightValidMoves();
     }
 }

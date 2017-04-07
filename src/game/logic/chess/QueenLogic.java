@@ -22,6 +22,5 @@ public class QueenLogic extends MoveLogic {
         setIncrementalDirectionalMovesSafely(RIGHT, DOWN);
         setIncrementalDirectionalMovesSafely(LEFT, DOWN);
         setIncrementalDirectionalMovesSafely(RIGHT, UP);
-        highlightValidMoves();
     }
 }

@@ -20,6 +20,5 @@ public class KinShouLogic extends MoveLogic {
         sortMoveOrCaptureSafely(LEFT, NONE);
         sortMoveOrCaptureSafely(RIGHT, NONE);
         sortMoveOrCaptureSafely(NONE, -DIR);
-        highlightValidMoves();
     }
 }

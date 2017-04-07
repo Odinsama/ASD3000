@@ -18,9 +18,7 @@ public abstract class MoveLogic {
     protected final int DOWN = 1, UP = -1, RIGHT = 1, LEFT = -1, NONE = 0;
     protected final Tile[][] TILES;
     protected int x,y;
-    protected List<Tile> moves = new ArrayList<>();
-    protected List<Tile> captures = new ArrayList<>();
-    private List<Tile[]> skipCaptures = new ArrayList<>();
+
 
     protected MoveLogic(Piece piece){
         this.PIECE = piece;
@@ -35,29 +33,6 @@ public abstract class MoveLogic {
 
     public abstract void setValidMoves();
 
-    protected void highlightMove(Tile tile){
-        tile.highlight(Color.cyan);
-    }
-
-    protected void highlightCapture(Tile tile){
-        Piece highlightPiece = tile.getPiece();
-        if (highlightPiece.isNorth() != PIECE.isNorth()) {
-            tile.highlight(Color.orange);
-        }
-    }
-
-    private void highlightSkipCapture(Tile[] tiles){
-        Piece highlightPiece = tiles[1].getPiece();
-        if (highlightPiece.isNorth() != PIECE.isNorth()) {
-            tiles[0].specialCaptureHighlight(Color.orange);
-        }
-    }
-
-    private void highlightSpecialMove(Tile tile){
-        tile.specialHighlight(Color.blue);
-    }
-
-
     //if this safe method hits an array exception the
     // program will just move on to the next direction
     protected void setIncrementalDirectionalMovesSafely(int xIncrement, int yIncrement) {
@@ -67,7 +42,7 @@ public abstract class MoveLogic {
             x += xIncrement;
             y += yIncrement;
             while (!TILES[x][y].isOccupied()) {
-                moves.add(TILES[x][y]);
+                new SimpleMove(TILES[x][y]);
                 x += xIncrement;
                 y += yIncrement;
             }
@@ -75,7 +50,9 @@ public abstract class MoveLogic {
         finally {
             try{
                 if (TILES[x][y].isOccupied()){
-                    captures.add(TILES[x][y]);
+                    if (TILES[x][y].getPiece().isNorth() != PIECE.isNorth()) {
+                        new CaptureMove(TILES[x][y]);
+                    }
                 }
             }catch (ArrayIndexOutOfBoundsException ignored){}
             //reset x and y to the original position
@@ -83,14 +60,7 @@ public abstract class MoveLogic {
         }
     }
 
-    protected void highlightValidMoves() {
-        moves.forEach(this::highlightMove);
-        moves.clear();
-        captures.forEach(this::highlightCapture);
-        captures.clear();
-        skipCaptures.forEach(this::highlightSkipCapture);
-        skipCaptures.clear();
-    }
+
     protected void sortMoveOrCaptureSafely(int xIncrement, int yIncrement){
         try {
             if (!TILES[x + xIncrement][y + yIncrement].isOccupied()) {
@@ -102,7 +72,7 @@ public abstract class MoveLogic {
     protected void addMoveSafely(int xIncrement, int yIncrement) {
         try{
             if (!TILES[x + xIncrement][y + yIncrement].isOccupied()) {
-                moves.add(TILES[x + xIncrement][y + yIncrement]);
+                new SimpleMove(TILES[x + xIncrement][y + yIncrement]);
             }
         }catch (ArrayIndexOutOfBoundsException ignored){
         }
@@ -111,14 +81,18 @@ public abstract class MoveLogic {
     protected void addCaptureSafely(int xIncrement, int yIncrement) {
         try{
             if (TILES[x + xIncrement][y + yIncrement].getPiece() != null)
-            captures.add(TILES[x + xIncrement][y + yIncrement]);
+                if (TILES[x + xIncrement][y + yIncrement].getPiece().isNorth() != PIECE.isNorth()) {
+                    new CaptureMove(TILES[x + xIncrement][y + yIncrement]);
+                }
         }catch (ArrayIndexOutOfBoundsException ignored){}
     }
 
     protected void addSkipCaptureSafely(int xIncrement, int yIncrement){
         try{
-            if (TILES[x + xIncrement][y + yIncrement].getPiece() != null && TILES[x + xIncrement*2][y + yIncrement*2].getPiece() == null)
-                skipCaptures.add(new Tile[]{ TILES[x + xIncrement*2][y + yIncrement*2], TILES[x + xIncrement][y + yIncrement]});
+            if (TILES[x + xIncrement][y + yIncrement].isOccupied() && !TILES[x + xIncrement*2][y + yIncrement*2].isOccupied())
+                if (TILES[x + xIncrement][y + yIncrement].getPiece().isNorth() != PIECE.isNorth()){
+                new SkipCaptureMove(TILES[x + xIncrement*2][y + yIncrement*2], TILES[x + xIncrement][y + yIncrement].getPiece());
+                }
         }catch (ArrayIndexOutOfBoundsException ignored){}
     }
 

@@ -17,7 +17,7 @@ public class ShogiBoard extends Board {
 
     @Override
     protected Tile generateTile(Color tileColor) {
-        return new ShogiTile(tileColor);
+        return new Tile(tileColor);
     }
 
     @Override

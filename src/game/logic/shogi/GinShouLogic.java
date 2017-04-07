@@ -19,6 +19,5 @@ public class GinShouLogic extends MoveLogic {
         sortMoveOrCaptureSafely(RIGHT, DIR);
         sortMoveOrCaptureSafely(LEFT, -DIR);
         sortMoveOrCaptureSafely(RIGHT, -DIR);
-        highlightValidMoves();
     }
 }

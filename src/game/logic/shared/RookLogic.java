@@ -7,6 +7,7 @@ import game.logic.MoveLogic;
 /**
  * Created by Odin on 3/26/2NONE17.
  */
+//used in both Chess and Shogi!
 public class RookLogic extends MoveLogic {
     public RookLogic(Piece rook) {
         super(rook);
@@ -20,6 +21,5 @@ public class RookLogic extends MoveLogic {
         setIncrementalDirectionalMovesSafely(NONE, DOWN);
         setIncrementalDirectionalMovesSafely(LEFT, NONE);
         setIncrementalDirectionalMovesSafely(RIGHT, NONE);
-        highlightValidMoves();
     }
 }

@@ -22,7 +22,6 @@ public class KnightLogic extends MoveLogic {
         sortMoveOrCaptureSafely(RIGHT*2, DOWN);
         sortMoveOrCaptureSafely(LEFT*2, UP);
         sortMoveOrCaptureSafely(RIGHT*2, UP);
-        highlightValidMoves();
     }
 
 }

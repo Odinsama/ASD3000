@@ -38,7 +38,7 @@ public abstract class Board extends JPanel{
 
     public void movePiece(Tile origin, Piece movingPiece,  Tile target){
         //removing the pointer to the Piece for future validation purposes
-        //otherwise a check to see if the tile has a PIECE will not return null
+        //otherwise a check to see if the tile has a piece will not return null
         origin.setPiece(null);
         target.setPiece(movingPiece);
     }
@@ -52,7 +52,6 @@ public abstract class Board extends JPanel{
 
     public void undoCapture(Tile target, Piece movingPiece, Piece captured, Tile origin) {
         target.add(captured);
-        System.out.println(origin.getPos());
         origin.add(movingPiece);
         movingPiece.setMovesMade(-1);
     }

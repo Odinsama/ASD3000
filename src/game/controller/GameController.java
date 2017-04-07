@@ -3,13 +3,16 @@ package game.controller;
 import game.collection.Game;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.abstractObjects.Tile;
+import gui.domain.concreteObjects.chess.Pieces.Pawn;
 import gui.domain.utils.IPromotable;
 
 /**
  * Created by Odin on 3/13/2017.
  */
 public class GameController {
-    
+
+    private GameController(){}
+
     private static Game game;
     
     public static void setOrigin(Piece origin){
@@ -56,7 +59,8 @@ public class GameController {
         game.promote(piece);
     }
 
-    public static void skipCapture(Tile tile) {
-        game.skipCapture(tile);
+    public static void skipCapture(Tile tile, Piece enemyPiece) {
+        game.skipCapture(tile, enemyPiece);
     }
+
 }

@@ -28,6 +28,5 @@ public class MenLogic extends MoveLogic {
             addSkipCaptureSafely(LEFT, -DIR);
             addSkipCaptureSafely(RIGHT, -DIR);
         }
-        highlightValidMoves();
     }
 }

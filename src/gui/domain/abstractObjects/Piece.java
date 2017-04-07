@@ -30,8 +30,8 @@ public abstract class Piece extends JComponent {
                 super.mousePressed(e);
                 if (GameController.isYourTurn(isNorth)) {
                     GameController.clearHighlights();
-                    moveLogic.setValidMoves();
                     GameController.setOrigin(piece);
+                    moveLogic.setValidMoves();
                 }
                 else if (captureIsValid()){
                     GameController.capture(piece);

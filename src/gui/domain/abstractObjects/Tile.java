@@ -1,6 +1,7 @@
 package gui.domain.abstractObjects;
 
 import game.controller.GameController;
+import game.logic.Move;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,15 +11,13 @@ import java.awt.event.MouseEvent;
 /**
  * Created by Odin on 1/31/2017.
  */
-public abstract class Tile extends JPanel {
+public class Tile extends JPanel {
 
     private Piece piece;
     private Boolean isHighlighted = false;
     private Dimension tilePos;
-    private Tile tile = this;
     private Color highlightColor;
-    private boolean hasSpecialHighlight;
-    private boolean hasSpecialCaptureHighlight;
+    private Move possibleMove;
 
     public Tile(Color bg){
         setLayout(new BorderLayout());
@@ -27,30 +26,20 @@ public abstract class Tile extends JPanel {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                if (isHighlighted){
-                    normalMove(tile);
-                }
-                if (hasSpecialHighlight){
-                    specialMove(tile);
-                }
-                if (hasSpecialCaptureHighlight){
-                    specialCapture(tile);
-                }
-                GameController.clearHighlights();
-
+                if (possibleMove == null) return;
+                    possibleMove.execute();
+                    GameController.clearHighlights();
             }
         });
     }
 
-    protected abstract void specialCapture(Tile tile);
-
-    protected abstract void specialMove(Tile tile);
-
-    protected abstract void normalMove(Tile tile);
+    public void setPossibleMove(Move possibleMove) {
+        this.possibleMove = possibleMove;
+    }
 
     public void setPiece(Piece piece) {
         this.piece = piece;
-        if (piece!= null){
+        if (piece != null) {
             add(piece);
         }
     }
@@ -64,22 +53,10 @@ public abstract class Tile extends JPanel {
         highlightColor = color;
         repaint();
     }
-    public void specialHighlight(Color color) {
-        hasSpecialHighlight = true;
-        highlightColor = color;
-        repaint();
-    }
-
-    public void specialCaptureHighlight(Color color) {
-        hasSpecialCaptureHighlight = true;
-        highlightColor = color;
-        repaint();
-    }
 
     void removeHighlight(){
-        hasSpecialCaptureHighlight = false;
-        hasSpecialHighlight = false;
         isHighlighted = false;
+        possibleMove = null;
         repaint();
     }
 
@@ -93,7 +70,7 @@ public abstract class Tile extends JPanel {
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        if (isHighlighted || hasSpecialHighlight || hasSpecialCaptureHighlight) {
+        if (isHighlighted) {
             g.setColor(highlightColor);
             ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.30f));
             g.fillRect(0, 0, getWidth(), getHeight());

@@ -24,11 +24,11 @@ public class KnightLogic extends MoveLogic {
         addMoveSafely(+2, -1);
 
 
-        //filters captures from moves
+        //filters captures from tempMoves
         moves.stream()
                 .filter(e-> !checkIfEmpty(e))
                 .forEach(e-> captures.add(e));
-        //highlights moves
+        //highlights tempMoves
         moves.stream()
                 .filter(this::checkIfEmpty)
                 .forEach(this::highlightMove);
@@ -41,7 +41,7 @@ public class KnightLogic extends MoveLogic {
 
     private void addMoveSafely(int xIncrement, int yIncrement) {
         try{
-            moves.add(TILES[x + xIncrement][y + yIncrement]);
+            TILES[x + xIncrement][y + yIncrement]);
         }catch (ArrayIndexOutOfBoundsException ignored){}
     }
 

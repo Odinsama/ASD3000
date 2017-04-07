@@ -1,8 +1,12 @@
 package game.logic.chess;
 
+import game.controller.GameController;
+import game.logic.SkipCaptureMove;
 import gui.domain.concreteObjects.chess.Pieces.Pawn;
 import game.logic.MoveLogic;
 import gui.domain.abstractObjects.Tile;
+
+import java.awt.*;
 
 
 /**
@@ -23,24 +27,29 @@ public class PawnLogic extends MoveLogic {
         }
         addCaptureSafely(LEFT, DIR);
         addCaptureSafely(RIGHT, DIR);
-        addUnPassantSafely(LEFT, DIR);
-        addUnPassantSafely(RIGHT, DIR);
-        highlightValidMoves();
+        addUnPassantSafely(LEFT);
+        addUnPassantSafely(RIGHT);
     }
 
-    private void addUnPassantSafely(int left, int dir) {
-        if (PIECE.isNorth() && y == 3 || !PIECE.isNorth() && y == 4){}
-    }
-
-    @Override
-    protected void highlightValidMoves() {
-        moves.stream()
-                .filter(tile -> !tile.isOccupied())
-                .forEach(this::highlightMove);
-        captures.stream()
-                .filter(Tile::isOccupied)
-                .forEach(this::highlightCapture);
-        moves.clear();
-        captures.clear();
+    private void addUnPassantSafely(int xIncrement) {
+        try {
+            //is the piece on it's proper row?
+            if (PIECE.isNorth() && y == 4 || !PIECE.isNorth() && y == 3) {
+                //is the tile next to it occupied?
+                if (TILES[x+xIncrement][y].isOccupied()){
+                    //is it a pawn?
+                    if (TILES[x+xIncrement][y].getPiece().getClass() == Pawn.class){
+                        Pawn enemyPawn = (Pawn) TILES[x+xIncrement][y].getPiece();
+                        //is it an enemy?
+                        if (enemyPawn.isNorth() != PIECE.isNorth()){
+                            //did it do a double move to get there?
+                            if (enemyPawn.getMovesMade()==1){
+                                new SkipCaptureMove(TILES[x+xIncrement][y+DIR], enemyPawn);
+                            }
+                        }
+                    }
+                }
+            }
+        }catch (ArrayIndexOutOfBoundsException ignored){}
     }
 }

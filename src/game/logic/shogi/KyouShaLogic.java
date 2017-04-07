@@ -15,6 +15,5 @@ public class KyouShaLogic extends MoveLogic {
     public void setValidMoves() {
         setPosition();
         setIncrementalDirectionalMovesSafely(NONE, DIR);
-        highlightValidMoves();
     }
 }

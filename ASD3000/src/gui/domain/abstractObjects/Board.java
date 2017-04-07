@@ -57,7 +57,6 @@ public abstract class Board extends JPanel{
 
     public void undoCapture(Tile target, Piece captured, Tile oldTile, Piece origin) {
         target.add(captured);
-        System.out.println(oldTile.getPos());
         oldTile.add(origin);
     }
 

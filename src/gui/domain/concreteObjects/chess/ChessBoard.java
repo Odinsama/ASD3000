@@ -17,7 +17,7 @@ public class ChessBoard extends Board {
 
     @Override
     protected Tile generateTile(Color tileColor) {
-        return new ChessTile(tileColor);
+        return new Tile(tileColor);
     }
 
     @Override
