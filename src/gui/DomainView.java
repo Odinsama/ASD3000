@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 class DomainView extends JPanel {
 
-    private GameCenter games = new GameCenter();
+    private final GameCenter games = new GameCenter();
     private Game currentGame;
     private Board board;
 

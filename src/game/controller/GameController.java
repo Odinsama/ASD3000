@@ -3,7 +3,6 @@ package game.controller;
 import game.collection.Game;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.abstractObjects.Tile;
-import gui.domain.concreteObjects.chess.Pieces.Pawn;
 import gui.domain.utils.IPromotable;
 
 /**
@@ -14,6 +13,7 @@ public class GameController {
     private GameController(){}
 
     private static Game game;
+    private static Boolean isNorthsTurn = false;
     
     public static void setOrigin(Piece origin){
         game.setMovingPiece(origin);
@@ -40,7 +40,7 @@ public class GameController {
     }
 
     public static boolean isYourTurn(Boolean isNorth) {
-        return isNorth == game.isNorthsTurn();
+        return isNorth == isNorthsTurn;
     }
 
     public static void capture(Piece piece) {
@@ -63,4 +63,7 @@ public class GameController {
         game.skipCapture(tile, enemyPiece);
     }
 
+    public static void endTurn() {
+        isNorthsTurn = !isNorthsTurn;
+    }
 }

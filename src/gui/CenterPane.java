@@ -8,7 +8,7 @@ import java.awt.*;
  */
 class CenterPane extends JPanel{
 
-    private DomainView domainView;
+    private final DomainView domainView;
 
     CenterPane(){
         setLayout(new BorderLayout());

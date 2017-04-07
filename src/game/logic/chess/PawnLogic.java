@@ -1,12 +1,8 @@
 package game.logic.chess;
 
-import game.controller.GameController;
 import game.logic.SkipCaptureMove;
 import gui.domain.concreteObjects.chess.Pieces.Pawn;
 import game.logic.MoveLogic;
-import gui.domain.abstractObjects.Tile;
-
-import java.awt.*;
 
 
 /**

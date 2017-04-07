@@ -10,7 +10,7 @@ import java.util.Map;
  */
 class ShortCuts {
 
-    private Map<String, Runnable> shortcuts = new HashMap<>();
+    private final Map<String, Runnable> shortcuts = new HashMap<>();
 
     ShortCuts(){
         shortcuts.put("undo" , GameController::undoMove);

@@ -11,7 +11,7 @@ import java.awt.*;
  */
 public abstract class ShogiPiece extends Piece implements IPromotable {
     private final char[] chars;
-    protected ShogiPiece(Boolean isNorth, String pieceName) {
+    ShogiPiece(Boolean isNorth, String pieceName) {
         super(isNorth);
         chars = pieceName.toCharArray();
     }

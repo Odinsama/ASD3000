@@ -8,7 +8,7 @@ import java.awt.event.KeyListener;
  */
 public class ShortcutListener implements KeyListener {
 
-    private ShortCuts shortcuts = new ShortCuts();
+    private final ShortCuts shortcuts = new ShortCuts();
 
     @Override
     public void keyTyped(KeyEvent e) {/*not used*/}

@@ -1,7 +1,5 @@
 package game.controller;
 
-import gui.domain.abstractObjects.Board;
-
 /**
  * Created by Odin on 4/3/2017.
  */

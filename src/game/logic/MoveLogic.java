@@ -4,10 +4,6 @@ import game.controller.GameController;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.abstractObjects.Tile;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Odin on 2/16/2017.
  */

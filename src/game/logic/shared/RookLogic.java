@@ -1,7 +1,6 @@
 package game.logic.shared;
 
 import gui.domain.abstractObjects.Piece;
-import gui.domain.concreteObjects.chess.Pieces.Rook;
 import game.logic.MoveLogic;
 
 /**

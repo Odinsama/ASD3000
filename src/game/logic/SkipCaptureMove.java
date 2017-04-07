@@ -3,7 +3,6 @@ package game.logic;
 import game.controller.GameController;
 import gui.domain.abstractObjects.Piece;
 import gui.domain.abstractObjects.Tile;
-import gui.domain.concreteObjects.chess.Pieces.Pawn;
 
 import java.awt.*;
 
@@ -11,7 +10,7 @@ import java.awt.*;
  * Created by Odin on 4/7/2017.
  */
 public class SkipCaptureMove extends Move {
-    private Piece enemyPiece;
+    private final Piece enemyPiece;
 
     public SkipCaptureMove(Tile target, Piece enemyPiece) {
         super(target);

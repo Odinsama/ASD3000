@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class GameCenter {
 
-    private Map<String, Game> games = new HashMap<>();
+    private final Map<String, Game> games = new HashMap<>();
 
     public GameCenter(){
 

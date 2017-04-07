@@ -15,12 +15,12 @@ public abstract class Piece extends JComponent {
 
     private final Boolean isNorth;
     protected Image image;
-    public int movesMade = 0;
+    private int movesMade = 0;
     protected MoveLogic moveLogic;
 
     //within the anonymous mousePressed event
     // "this" refers to the mouseListener not the PIECE
-    private Piece piece = this;
+    private final Piece piece = this;
 
     protected Piece(Boolean isNorth) {
         this.isNorth = isNorth;

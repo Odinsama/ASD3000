@@ -8,7 +8,7 @@ import game.logic.MoveLogic;
  * Created by Odin on 4/1/2017.
  */
 public class MenLogic extends MoveLogic {
-    private Men men;
+    private final Men men;
 
     public MenLogic(Piece piece) {
         super(piece);

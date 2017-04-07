@@ -11,9 +11,9 @@ import java.awt.*;
  */
 public class MainFrame extends JFrame implements ICoR {
 
-    private NorthPane northPane = new NorthPane();
-    private CenterPane centerPane = new CenterPane();
-    private SouthPane southPane = new SouthPane();
+    private final NorthPane northPane = new NorthPane();
+    private final CenterPane centerPane = new CenterPane();
+    private final SouthPane southPane = new SouthPane();
 
     public MainFrame(){
         super("Odin's Board Games");

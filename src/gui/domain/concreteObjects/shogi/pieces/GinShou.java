@@ -1,7 +1,6 @@
 package gui.domain.concreteObjects.shogi.pieces;
 
 import game.logic.shogi.GinShouLogic;
-import gui.domain.abstractObjects.Piece;
 
 /**
  * Created by Odin on 4/3/2017.

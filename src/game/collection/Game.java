@@ -12,19 +12,21 @@ import java.util.Stack;
 /**
  * Created by Odin on 1/31/2017.
  */
+
+//this class is a composite of all the objects needed to run a simple board game
 public abstract class Game {
 
-    protected Board board;
-    private Stack<Command> commands = new Stack<>();
-    private Stack<Command> undoneCommands = new Stack<>();
-    private Piece movingPiece;
-    private boolean northsTurn = false;
+    private Board board;
+    private GameState gameState;
+    private CommandCenter commandCenter;
     private boolean hasBegun = false;
 
     private Board startGame(){
         hasBegun = true;
         board = generateBoard();
         board.generatePieces();
+        gameState = new GameState();
+        commandCenter = new CommandCenter(gameState, board);
         return board;
     }
 
@@ -39,62 +41,31 @@ public abstract class Game {
     protected abstract Board generateBoard();
 
     public void movePiece(Tile target){
-        MoveCommand moveCommand = new MoveCommand(board, movingPiece, target);
-        commands.add(moveCommand);
-        undoneCommands.clear();
-        moveCommand.execute();
-        northsTurn = !northsTurn;
+        commandCenter.movePiece(target);
     }
 
     public void capture(Piece target) {
-        CaptureCommand captureCommand = new CaptureCommand(board, movingPiece, target);
-        commands.add(captureCommand);
-        undoneCommands.clear();
-        captureCommand.execute();
-        northsTurn = !northsTurn;
+        commandCenter.capture(target);
     }
 
     public void skipCapture(Tile target, Piece enemyPiece) {
-        CaptureCommand captureCommand = new CaptureCommand(board, movingPiece, enemyPiece);
-        Tile capturedTile = (Tile) enemyPiece.getParent();
-        MoveCommand moveCommand = new MoveCommand(board, movingPiece, capturedTile, target);
-        SkipCaptureCommand skipCaptureCommand = new SkipCaptureCommand(moveCommand, captureCommand);
-        commands.add(skipCaptureCommand);
-        undoneCommands.clear();
-        skipCaptureCommand.execute();
-        northsTurn = !northsTurn;
+        commandCenter.skipCapture(target, enemyPiece);
     }
 
     public void undoMove() {
-        if (commands.isEmpty())return;
-        Command undoCommand = commands.pop();
-        undoCommand.undo();
-        undoneCommands.add(undoCommand);
-        northsTurn = !northsTurn;
+        gameState.undoMove();
     }
 
     public void redoMove() {
-        if (undoneCommands.isEmpty())return;
-        Command command = undoneCommands.pop();
-        commands.add(command);
-        command.execute();
-        northsTurn = !northsTurn;
+        gameState.redoMove();
     }
 
     public void resetBoard(){
-        while (!commands.isEmpty()){
-            undoMove();
-        }
+        gameState.resetBoard();
     }
 
     public void setMovingPiece(Piece movingPiece) {
-        this.movingPiece = movingPiece;
-        Tile originTile = (Tile) movingPiece.getParent();
-        originTile.highlight(Color.yellow);
-    }
-
-    public boolean isNorthsTurn() {
-        return northsTurn;
+        gameState.setMovingPiece(movingPiece);
     }
 
     public void clearHighlights() {

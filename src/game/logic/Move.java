@@ -8,7 +8,7 @@ import gui.domain.abstractObjects.Tile;
 public abstract class Move {
 
 
-    protected final Tile target;
+    final Tile target;
 
     Move(Tile target){
         this.target = target;
