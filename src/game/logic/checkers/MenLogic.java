@@ -2,7 +2,7 @@ package game.logic.checkers;
 
 import gui.domain.abstractObjects.Piece;
 import gui.domain.concreteObjects.checkers.Men;
-import game.logic.MoveLogic;
+import game.logic.shared.moves.MoveLogic;
 
 /**
  * Created by Odin on 4/1/2017.

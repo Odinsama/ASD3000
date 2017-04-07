@@ -1,4 +1,4 @@
-package game.logic;
+package game.logic.shared.moves;
 
 import game.controller.GameController;
 import gui.domain.abstractObjects.Tile;
@@ -8,18 +8,18 @@ import java.awt.*;
 /**
  * Created by Odin on 4/7/2017.
  */
-public class CaptureMove extends Move {
-    CaptureMove(Tile target) {
+public class SimpleMove extends Move {
+    SimpleMove(Tile target) {
         super(target);
     }
 
     @Override
     public void execute() {
-        GameController.capture(target.getPiece());
+        GameController.movePiece(target);
     }
 
     @Override
     protected void highlightTarget() {
-        target.highlight(Color.orange);
+        target.highlight(Color.cyan);
     }
 }

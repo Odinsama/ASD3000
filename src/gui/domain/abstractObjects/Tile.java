@@ -1,7 +1,7 @@
 package gui.domain.abstractObjects;
 
 import game.controller.GameController;
-import game.logic.Move;
+import game.logic.shared.moves.Move;
 
 import javax.swing.*;
 import java.awt.*;

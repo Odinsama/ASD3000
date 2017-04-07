@@ -1,4 +1,4 @@
-package game.logic;
+package game.logic.shared.moves;
 
 import gui.domain.abstractObjects.Tile;
 

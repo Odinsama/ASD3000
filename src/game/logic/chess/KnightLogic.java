@@ -1,7 +1,7 @@
 package game.logic.chess;
 
 import gui.domain.concreteObjects.chess.Pieces.Knight;
-import game.logic.MoveLogic;
+import game.logic.shared.moves.MoveLogic;
 
 /**
  * Created by Odin on 3/11/2017.

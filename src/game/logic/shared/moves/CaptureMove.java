@@ -1,5 +1,6 @@
-package game.logic;
+package game.logic.shared.moves;
 
+import game.controller.GameController;
 import gui.domain.abstractObjects.Tile;
 
 import java.awt.*;
@@ -7,18 +8,18 @@ import java.awt.*;
 /**
  * Created by Odin on 4/7/2017.
  */
-public class DoubleMove extends Move {
-    DoubleMove(Tile target) {
+public class CaptureMove extends Move {
+    CaptureMove(Tile target) {
         super(target);
     }
 
     @Override
     public void execute() {
-
+        GameController.capture(target.getPiece());
     }
 
     @Override
     protected void highlightTarget() {
-        target.highlight(Color.blue);
+        target.highlight(Color.orange);
     }
 }

@@ -2,34 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed656811-3d80-4997-b857-f06a5eff145c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/controller/CommandCenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/controller/GameState.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/checkers/KingLogic.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/game/logic/CaptureMove.java" afterPath="$PROJECT_DIR$/src/game/logic/shared/moves/CaptureMove.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/game/logic/DoubleMove.java" afterPath="$PROJECT_DIR$/src/game/logic/shared/moves/DoubleMove.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/game/logic/Move.java" afterPath="$PROJECT_DIR$/src/game/logic/shared/moves/Move.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/game/logic/MoveLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/shared/moves/MoveLogic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/game/logic/SimpleMove.java" afterPath="$PROJECT_DIR$/src/game/logic/shared/moves/SimpleMove.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/game/logic/SkipCaptureMove.java" afterPath="$PROJECT_DIR$/src/game/logic/shared/moves/SkipCaptureMove.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/EntryPoint.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/EntryPoint.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/CenterPane.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/CenterPane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/DomainView.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/DomainView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/MainFrame.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/MainFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/abstractObjects/Board.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/abstractObjects/Board.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/abstractObjects/Piece.class" afterPath="$PROJECT_DIR$/out/production/ASD3000/gui/domain/abstractObjects/Piece.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntryPoint.java" afterPath="$PROJECT_DIR$/src/EntryPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/collection/Game.java" afterPath="$PROJECT_DIR$/src/game/collection/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/collection/GameCenter.java" afterPath="$PROJECT_DIR$/src/game/collection/GameCenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/controller/GameController.java" afterPath="$PROJECT_DIR$/src/game/controller/GameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/controller/SkipCaptureCommand.java" afterPath="$PROJECT_DIR$/src/game/controller/SkipCaptureCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/Move.java" afterPath="$PROJECT_DIR$/src/game/logic/Move.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/MoveLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/MoveLogic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/SkipCaptureMove.java" afterPath="$PROJECT_DIR$/src/game/logic/SkipCaptureMove.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/checkers/MenLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/checkers/MenLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/chess/KnightLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/KnightLogic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/chess/PawnLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/PawnLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/chess/QueenLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/chess/QueenLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/shared/BishopLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/shared/BishopLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/shared/KingLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/shared/KingLogic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/shared/RookLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/shared/RookLogic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/CenterPane.java" afterPath="$PROJECT_DIR$/src/gui/CenterPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/DomainView.java" afterPath="$PROJECT_DIR$/src/gui/DomainView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/MainFrame.java" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/controller/ShortCuts.java" afterPath="$PROJECT_DIR$/src/gui/controller/ShortCuts.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/controller/ShortcutListener.java" afterPath="$PROJECT_DIR$/src/gui/controller/ShortcutListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/shogi/FuHyouLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/shogi/FuHyouLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/shogi/GinShouLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/shogi/GinShouLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/shogi/KeiMaLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/shogi/KeiMaLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/shogi/KinShouLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/shogi/KinShouLogic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/logic/shogi/KyouShaLogic.java" afterPath="$PROJECT_DIR$/src/game/logic/shogi/KyouShaLogic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/abstractObjects/Piece.java" afterPath="$PROJECT_DIR$/src/gui/domain/abstractObjects/Piece.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/ShogiSet.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/ShogiSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/GinShou.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/GinShou.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KakuGyou.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KakuGyou.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KeiMa.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KeiMa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KinShou.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KinShou.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/OuShou.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/OuShou.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/ShogiPiece.java" afterPath="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/ShogiPiece.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/domain/abstractObjects/Tile.java" afterPath="$PROJECT_DIR$/src/gui/domain/abstractObjects/Tile.java" />
     </list>
     <ignored path="ASD3000.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,26 +51,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/collection/Game.java">
+      <file leaf-file-name="MoveLogic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/MoveLogic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="15" column="80" lean-forward="true" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+            <state relative-caret-position="0">
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleMove.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/SimpleMove.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
-                <element signature="e#1033#1034#0" expanded="true" />
-                <element signature="e#1080#1081#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1166#1167#0" expanded="true" />
-                <element signature="e#1228#1229#0" expanded="true" />
-                <element signature="e#1289#1290#0" expanded="true" />
-                <element signature="e#1319#1320#0" expanded="true" />
-                <element signature="e#1355#1356#0" expanded="true" />
-                <element signature="e#1385#1386#0" expanded="true" />
-                <element signature="e#1421#1422#0" expanded="true" />
-                <element signature="e#1452#1453#0" expanded="true" />
-                <element signature="e#1490#1491#0" expanded="true" />
-                <element signature="e#1543#1544#0" expanded="true" />
-                <element signature="e#1596#1597#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#241#242#0" expanded="true" />
+                <element signature="e#270#271#0" expanded="true" />
+                <element signature="e#415#416#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SkipCaptureMove.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/SkipCaptureMove.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShogiSet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShogiSet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/ShogiSet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -104,26 +117,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandCenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/controller/CommandCenter.java">
+      <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="69" lean-forward="true" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+            <state relative-caret-position="0">
+              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaptureMove.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/CaptureMove.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/controller/GameController.java">
+      <file leaf-file-name="DoubleMove.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/DoubleMove.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="0">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
-                <element signature="e#1421#1422#0" expanded="true" />
-                <element signature="e#1465#1466#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#202#203#0" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#335#336#0" expanded="true" />
+                <element signature="e#379#380#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandCenter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/controller/CommandCenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="69" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,8 +259,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/game/logic/chess/RookLogic.java" />
-        <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KakuGyou.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KeiMa.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KinShou.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/pieces/KyouSha.java" />
@@ -270,6 +308,8 @@
         <option value="$PROJECT_DIR$/src/game/controller/CommandCenter.java" />
         <option value="$PROJECT_DIR$/src/game/controller/GameState.java" />
         <option value="$PROJECT_DIR$/src/gui/domain/concreteObjects/shogi/ShogiSet.java" />
+        <option value="$PROJECT_DIR$/src/game/logic/shared/moves/SkipCaptureMove.java" />
+        <option value="$PROJECT_DIR$/src/game/logic/shared/moves/PromotionMove.java" />
       </list>
     </option>
   </component>
@@ -365,6 +405,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -584,7 +628,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shogi" />
+              <option name="myItemId" value="shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -613,56 +657,8 @@
               <option name="myItemId" value="shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ASD3000" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="checkers" />
+              <option name="myItemId" value="moves" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1218,7 +1214,7 @@
       <workItem from="1491138471339" duration="19970000" />
       <workItem from="1491199829995" duration="19917000" />
       <workItem from="1491517005532" duration="1480000" />
-      <workItem from="1491518519693" duration="8843000" />
+      <workItem from="1491518519693" duration="10205000" />
     </task>
     <task id="LOCAL-00001" summary="Now your own pieces won't be highlighted for capture">
       <created>1490743065388</created>
@@ -1318,11 +1314,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491525048069</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fleshed out the abstract Game class by moving command logic into the classes CommandCenter and GameState. Game is now just responsible for being a composite of various game related objects.">
+      <created>1491531013929</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1491531013929</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240835000" />
+    <option name="totallyTimeSpent" value="242197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1335,7 +1338,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1347,7 +1350,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.49373695" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.49373695" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24739583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.49791232" order="2" side_tool="false" content_ui="tabs" />
@@ -1422,7 +1425,8 @@
     <MESSAGE value="Added a skipCapture functionality that almost works! Some bugs must be sorted out." />
     <MESSAGE value="Fixed bug with skipCapture" />
     <MESSAGE value="Tile is no longer abstract, added new Move abstract class and concrete implementations, this drastically reduced the blob known as MoveLogic." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tile is no longer abstract, added new Move abstract class and concrete implementations, this drastically reduced the blob known as MoveLogic." />
+    <MESSAGE value="Fleshed out the abstract Game class by moving command logic into the classes CommandCenter and GameState. Game is now just responsible for being a composite of various game related objects." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fleshed out the abstract Game class by moving command logic into the classes CommandCenter and GameState. Game is now just responsible for being a composite of various game related objects." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1435,13 +1439,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/gui/controller/GUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11">
@@ -1668,63 +1665,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/logic/CaptureMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/logic/SkipCaptureMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/logic/chess/PawnLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/logic/MoveLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/logic/SimpleMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/logic/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1750,20 +1694,6 @@
         <state relative-caret-position="663">
           <caret line="40" column="79" lean-forward="true" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/logic/DoubleMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1837,7 +1767,7 @@
     <entry file="file://$PROJECT_DIR$/src/game/collection/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="15" column="80" lean-forward="true" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+          <caret line="15" column="80" lean-forward="false" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
           <folding>
             <element signature="e#1033#1034#0" expanded="true" />
             <element signature="e#1080#1081#0" expanded="true" />
@@ -1860,7 +1790,7 @@
     <entry file="file://$PROJECT_DIR$/src/game/controller/CommandCenter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="69" lean-forward="true" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+          <caret line="10" column="69" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1888,6 +1818,80 @@
         <state relative-caret-position="340">
           <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/CaptureMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/DoubleMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/MoveLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/SimpleMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/PromotionMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/logic/shared/moves/SkipCaptureMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

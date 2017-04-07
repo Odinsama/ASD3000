@@ -1,8 +1,8 @@
 package game.logic.chess;
 
-import game.logic.SkipCaptureMove;
+import game.logic.shared.moves.SkipCaptureMove;
 import gui.domain.concreteObjects.chess.Pieces.Pawn;
-import game.logic.MoveLogic;
+import game.logic.shared.moves.MoveLogic;
 
 
 /**

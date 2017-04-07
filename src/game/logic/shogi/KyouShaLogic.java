@@ -1,6 +1,6 @@
 package game.logic.shogi;
 
-import game.logic.MoveLogic;
+import game.logic.shared.moves.MoveLogic;
 import gui.domain.concreteObjects.shogi.pieces.KyouSha;
 
 /**

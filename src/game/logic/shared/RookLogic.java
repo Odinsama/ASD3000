@@ -1,7 +1,7 @@
 package game.logic.shared;
 
 import gui.domain.abstractObjects.Piece;
-import game.logic.MoveLogic;
+import game.logic.shared.moves.MoveLogic;
 
 /**
  * Created by Odin on 3/26/2NONE17.
