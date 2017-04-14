@@ -21,6 +21,7 @@ public abstract class Game {
     private CommandCenter commandCenter;
     private boolean hasBegun = false;
 
+
     private Board startGame(){
         hasBegun = true;
         board = generateBoard();
@@ -78,4 +79,15 @@ public abstract class Game {
 
     public abstract void promote(IPromotable piece);
 
+    public void doubleMove(Tile target, Piece secondPiece, Tile secondTarget) {
+        commandCenter.doubleMove(target,secondPiece,secondTarget);
+    }
+
+    public boolean isYourTurn(Boolean isNorth) {
+        return gameState.isYourTurn(isNorth);
+    }
+
+    public void endTurn() {
+        gameState.endTurn();
+    }
 }

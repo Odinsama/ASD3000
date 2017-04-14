@@ -1,6 +1,6 @@
 package gui.domain.concreteObjects.shogi.pieces;
 
-import game.logic.shared.KingLogic;
+import game.logic.shogi.OuShouLogic;
 
 /**
  * Created by Odin on 4/3/2017.
@@ -8,6 +8,6 @@ import game.logic.shared.KingLogic;
 public class OuShou extends ShogiPiece {
     public OuShou(boolean isNorth) {
         super(isNorth, "王棋");
-        moveLogic = new KingLogic(this);
+        moveLogic = new OuShouLogic(this);
     }
 }

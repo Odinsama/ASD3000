@@ -14,13 +14,13 @@ public class MoveCommand implements Command {
     private final Tile target;
     private final Tile origin;
 
-    public MoveCommand(Board board, Piece movingPiece, Tile target){
+    MoveCommand(Board board, Piece movingPiece, Tile target){
         this.board = board;
         this.movingPiece = movingPiece;
         origin = (Tile) movingPiece.getParent();
         this.target = target;
     }
-    public MoveCommand(Board board, Piece movingPiece, Tile origin, Tile target){
+    MoveCommand(Board board, Piece movingPiece, Tile origin, Tile target){
         this.board = board;
         this.movingPiece = movingPiece;
         this.origin = origin;

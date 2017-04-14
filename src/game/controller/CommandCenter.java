@@ -45,5 +45,12 @@ public class CommandCenter {
         skipCaptureCommand.execute();
         GameController.endTurn();
     }
-    
+
+    public void doubleMove(Tile target, Piece secondPiece, Tile secondTarget) {
+        DoubleMoveCommand doubleMoveCommand = new DoubleMoveCommand(board, target, gameState.getMovingPiece(), secondPiece, secondTarget);
+        gameState.addCommand(doubleMoveCommand);
+        gameState.clearUndoneCommands();
+        doubleMoveCommand.execute();
+        GameController.endTurn();
+    }
 }

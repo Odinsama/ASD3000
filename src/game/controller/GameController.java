@@ -13,8 +13,7 @@ public class GameController {
     private GameController(){}
 
     private static Game game;
-    private static Boolean isNorthsTurn = false;
-    
+
     public static void setOrigin(Piece origin){
         game.setMovingPiece(origin);
     }
@@ -40,7 +39,7 @@ public class GameController {
     }
 
     public static boolean isYourTurn(Boolean isNorth) {
-        return isNorth == isNorthsTurn;
+        return game.isYourTurn(isNorth);
     }
 
     public static void capture(Piece piece) {
@@ -64,6 +63,10 @@ public class GameController {
     }
 
     public static void endTurn() {
-        isNorthsTurn = !isNorthsTurn;
+        game.endTurn();
+    }
+
+    public static void doubleMove(Tile target, Piece secondPiece, Tile secondTarget) {
+        game.doubleMove(target, secondPiece, secondTarget);
     }
 }

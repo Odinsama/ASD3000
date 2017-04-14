@@ -11,13 +11,13 @@ import java.util.Stack;
  * Created by Odin on 4/7/2017.
  */
 
-//this class keeps track of the games state
-//so you can undo and redo moves that was made
+//this class keeps track of the state of the game
 public class GameState {
 
     private final Stack<Command> commands = new Stack<>();
     private final Stack<Command> undoneCommands = new Stack<>();
     private Piece movingPiece;
+    private Boolean isNorthsTurn = false;
 
     public GameState() {
     }
@@ -59,5 +59,13 @@ public class GameState {
 
     Piece getMovingPiece() {
         return movingPiece;
+    }
+
+    public boolean isYourTurn(Boolean isNorth) {
+        return isNorth == isNorthsTurn;
+    }
+
+    public void endTurn() {
+        isNorthsTurn = !isNorthsTurn;
     }
 }
