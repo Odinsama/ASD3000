@@ -23,6 +23,5 @@ public class Rook extends Piece {
         }catch (IOException e){
             e.printStackTrace();
         }
-        moveLogic = new RookLogic(this);
-    }
+        moveLogicList.add(new RookLogic(this));    }
 }

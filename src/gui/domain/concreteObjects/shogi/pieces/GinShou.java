@@ -8,6 +8,6 @@ import game.logic.shogi.GinShouLogic;
 public class GinShou extends ShogiPiece {
     public GinShou(boolean isNorth) {
         super(isNorth, "銀棋");
-        moveLogic = new GinShouLogic(this);
+        moveLogicList.add(new GinShouLogic(this));
     }
 }

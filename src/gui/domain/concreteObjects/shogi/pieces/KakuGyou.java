@@ -8,6 +8,6 @@ import game.logic.shared.BishopLogic;
 public class KakuGyou extends ShogiPiece {
     public KakuGyou(boolean isNorth) {
         super(isNorth, "角行");
-        moveLogic = new BishopLogic(this);
+        moveLogicList.add(new BishopLogic(this));
     }
 }

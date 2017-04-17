@@ -8,6 +8,6 @@ import game.logic.shogi.KyouShaLogic;
 public class KyouSha extends ShogiPiece {
     public KyouSha(boolean isNorth) {
         super(isNorth, "香車");
-        moveLogic = new KyouShaLogic(this);
+        moveLogicList.add(new KyouShaLogic(this));
     }
 }

@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Odin on 1/31/2017.
@@ -16,7 +18,7 @@ public abstract class Piece extends JComponent {
     private final Boolean isNorth;
     protected Image image;
     private int movesMade = 0;
-    protected MoveLogic moveLogic;
+    protected List<MoveLogic> moveLogicList = new ArrayList<>();
 
     //within the anonymous mousePressed event
     // "this" refers to the mouseListener not the PIECE
@@ -31,7 +33,7 @@ public abstract class Piece extends JComponent {
                 if (GameController.isYourTurn(isNorth)) {
                     GameController.clearHighlights();
                     GameController.setOrigin(piece);
-                    moveLogic.setValidMoves();
+                    moveLogicList.forEach(MoveLogic::setValidMoves);
                 }
                 else if (captureIsValid()){
                     GameController.capture(piece);

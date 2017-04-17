@@ -1,6 +1,7 @@
 package gui.domain.concreteObjects.chess.Pieces;
 
-import game.logic.chess.KingLogic;
+import game.logic.chess.CastlingLogic;
+import game.logic.shared.KingLogic;
 import gui.domain.abstractObjects.Piece;
 
 import javax.imageio.ImageIO;
@@ -23,7 +24,10 @@ public class King extends Piece{
         }catch (IOException e){
             e.printStackTrace();
         }
-        moveLogic = new KingLogic(this);
+        moveLogicList.add(new KingLogic(this));
+        //castling is a special move only the chess king can do, it is separated from "KingLogic" because
+        //KingLogic can be used by other pieces in other games like Shogi but those kings can't castle
+        moveLogicList.add(new CastlingLogic(this));
     }
 
 }

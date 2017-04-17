@@ -8,6 +8,6 @@ import game.logic.shogi.KinShouLogic;
 public class KinShou extends ShogiPiece {
     public KinShou(boolean isNorth) {
         super(isNorth, "金棋");
-        moveLogic = new KinShouLogic(this);
+        moveLogicList.add(new KinShouLogic(this));
     }
 }

@@ -15,7 +15,7 @@ public class Men extends Piece implements IPromotable {
 
     Men(boolean isNorth) {
         super(isNorth);
-        moveLogic = new MenLogic(this);
+        moveLogicList.add(new MenLogic(this));
 
     }
 

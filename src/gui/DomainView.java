@@ -17,7 +17,6 @@ import java.io.IOException;
 class DomainView extends JPanel {
 
     private final GameCenter games = new GameCenter();
-    private Game currentGame;
     private Board board;
 
     DomainView() {
@@ -29,7 +28,7 @@ class DomainView extends JPanel {
         try{
             remove(board);
         }catch (NullPointerException ignored){}
-        currentGame = games.getGame(game);
+        Game currentGame = games.getGame(game);
         GameController.initGame(currentGame);
         board = currentGame.openGame();
         add(board);

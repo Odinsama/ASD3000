@@ -8,26 +8,14 @@ import gui.domain.concreteObjects.chess.Pieces.Rook;
 /**
  * Created by Odin on 3/29/2017.
  */
-public class KingLogic extends MoveLogic {
-    public KingLogic(Piece king) {
+public class CastlingLogic extends MoveLogic {
+    public CastlingLogic(Piece king) {
         super(king);
     }
 
     @Override
     public void setValidMoves() {
         setPosition();
-        sortMoveOrCaptureSafely(RIGHT,DOWN);
-        sortMoveOrCaptureSafely(RIGHT,UP);
-        sortMoveOrCaptureSafely(LEFT,DOWN);
-        sortMoveOrCaptureSafely(LEFT,UP);
-        sortMoveOrCaptureSafely(RIGHT,NONE);
-        sortMoveOrCaptureSafely(NONE,DOWN);
-        sortMoveOrCaptureSafely(LEFT,NONE);
-        sortMoveOrCaptureSafely(NONE,UP);
-        addCastling();
-    }
-
-    private void addCastling() {
         if (PIECE.getMovesMade() != 0)return;
         if (!TILES[x-DIR][y].isOccupied() && !TILES[x-DIR*2][y].isOccupied() && TILES[x-DIR*3][y].getPiece() instanceof Rook){
             new DoubleMove(TILES[x-DIR*2][y],TILES[x-DIR][y],TILES[x-DIR*3][y].getPiece());

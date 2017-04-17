@@ -8,6 +8,6 @@ import game.logic.shared.RookLogic;
 public class HiSha extends ShogiPiece {
     public HiSha(boolean isNorth) {
         super(isNorth, "飛車");
-        moveLogic = new RookLogic(this);
+        moveLogicList.add(new RookLogic(this));
     }
 }

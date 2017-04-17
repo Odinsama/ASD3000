@@ -27,7 +27,7 @@ public class Pawn extends Piece implements IPromotable {
         }catch (IOException e){
             e.printStackTrace();
         }
-        moveLogic = new PawnLogic(this);
+        moveLogicList.add(new PawnLogic(this));
 
     }
 

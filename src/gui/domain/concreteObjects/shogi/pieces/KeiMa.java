@@ -8,6 +8,6 @@ import game.logic.shogi.KeiMaLogic;
 public class KeiMa extends ShogiPiece {
     public KeiMa(boolean isNorth) {
         super(isNorth, "桂馬");
-        moveLogic = new KeiMaLogic(this);
+        moveLogicList.add(new KeiMaLogic(this));
     }
 }

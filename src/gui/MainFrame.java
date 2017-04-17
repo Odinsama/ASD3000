@@ -12,7 +12,7 @@ import java.awt.*;
 public class MainFrame extends JFrame implements ICoR {
 
     private final NorthPane northPane = new NorthPane();
-    private final CenterPane centerPane = new CenterPane();
+    private final DomainView domainView = new DomainView();
     private final SouthPane southPane = new SouthPane();
 
     public MainFrame(){
@@ -36,7 +36,7 @@ public class MainFrame extends JFrame implements ICoR {
 
             //add components
             c.add(northPane, BorderLayout.NORTH);
-            c.add(centerPane, BorderLayout.CENTER);
+            c.add(domainView, BorderLayout.CENTER);
             c.add(southPane, BorderLayout.SOUTH);
 
             ShortcutListener shortcutListener = new ShortcutListener();
@@ -54,7 +54,7 @@ public class MainFrame extends JFrame implements ICoR {
 
     @Override
     public void setGame(String game) {
-        centerPane.setGame(game);
+        domainView.setGame(game);
     }
 
 }

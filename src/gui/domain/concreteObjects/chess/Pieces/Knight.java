@@ -23,6 +23,6 @@ public class Knight extends Piece{
         }catch (IOException e){
             e.printStackTrace();
         }
-        moveLogic = new KnightLogic(this);
+        moveLogicList.add(new KnightLogic(this));
     }
 }

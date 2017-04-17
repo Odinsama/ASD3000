@@ -1,4 +1,4 @@
-package game.logic.shogi;
+package game.logic.shared;
 
 import game.logic.shared.moves.MoveLogic;
 import gui.domain.abstractObjects.Piece;
@@ -6,8 +6,8 @@ import gui.domain.abstractObjects.Piece;
 /**
  * Created by Odin on 3/29/2017.
  */
-public class OuShouLogic extends MoveLogic {
-    public OuShouLogic(Piece king) {
+public class KingLogic extends MoveLogic {
+    public KingLogic(Piece king) {
         super(king);
     }
 

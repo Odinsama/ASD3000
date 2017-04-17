@@ -8,6 +8,6 @@ import game.logic.shogi.FuHyouLogic;
 public class FuHyou extends ShogiPiece {
     public FuHyou(Boolean isNorth) {
         super(isNorth, "歩兵");
-        moveLogic = new FuHyouLogic(this);
+        moveLogicList.add(new FuHyouLogic(this));
     }
 }

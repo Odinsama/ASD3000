@@ -23,6 +23,6 @@ public class Bishop extends Piece {
         }catch (IOException e){
             e.printStackTrace();
         }
-        moveLogic = new BishopLogic(this);
+        moveLogicList.add(new BishopLogic(this));
     }
 }

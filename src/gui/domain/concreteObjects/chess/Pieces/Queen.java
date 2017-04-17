@@ -23,6 +23,5 @@ public class Queen extends Piece{
         }catch (IOException e){
             e.printStackTrace();
         }
-        moveLogic = new QueenLogic(this);
-    }
+        moveLogicList.add(new QueenLogic(this));    }
 }
