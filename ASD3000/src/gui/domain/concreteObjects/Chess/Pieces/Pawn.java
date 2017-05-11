@@ -1,7 +1,7 @@
-package gui.domain.concreteObjects.chess.Pieces;
+package usecases.chess.Pieces;
 
-import game.logic.chess.PawnLogic;
-import gui.domain.abstractObjects.Piece;
+import usecases.chess.logic.PawnLogic;
+import simpleBoardGameEngine.coreComponents.Piece;
 import names.PieceType;
 
 import javax.imageio.ImageIO;

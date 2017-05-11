@@ -1,6 +1,6 @@
 package gui;
 
-import gui.domain.abstractObjects.Piece;
+import simpleBoardGameEngine.coreComponents.Piece;
 import gui.domain.concreteObjects.Tile;
 
 import javax.swing.*;

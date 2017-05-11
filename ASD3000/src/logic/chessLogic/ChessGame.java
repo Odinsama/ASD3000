@@ -1,8 +1,8 @@
-package game.logic.chess;
+package usecases.chess.logic;
 
 import game.Game;
-import gui.domain.abstractObjects.Board;
-import gui.domain.concreteObjects.chess.ChessBoard;
+import simpleBoardGameEngine.coreComponents.Board;
+import usecases.chess.ChessBoard;
 
 /**
  * Created by Odin on 2/14/2017.

@@ -1,7 +1,7 @@
-package gui.domain.concreteObjects.chess;
+package usecases.chess;
 
-import gui.domain.abstractObjects.Board;
-import gui.domain.abstractObjects.Piece;
+import simpleBoardGameEngine.coreComponents.Board;
+import simpleBoardGameEngine.coreComponents.Piece;
 
 import java.awt.*;
 

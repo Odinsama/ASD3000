@@ -1,6 +1,6 @@
-package gui.domain.concreteObjects.chess.Pieces;
+package usecases.chess.Pieces;
 
-import gui.domain.abstractObjects.Piece;
+import simpleBoardGameEngine.coreComponents.Piece;
 import names.PieceType;
 
 import javax.imageio.ImageIO;

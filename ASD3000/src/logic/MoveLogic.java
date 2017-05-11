@@ -1,7 +1,7 @@
 package game;
 
 import controller.GameController;
-import gui.domain.abstractObjects.Piece;
+import simpleBoardGameEngine.coreComponents.Piece;
 import gui.domain.concreteObjects.Tile;
 
 import java.util.ArrayList;

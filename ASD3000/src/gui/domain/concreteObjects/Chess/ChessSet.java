@@ -1,6 +1,6 @@
-package gui.domain.concreteObjects.chess;
+package usecases.chess;
 
-import gui.domain.abstractObjects.Piece;
+import simpleBoardGameEngine.coreComponents.Piece;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,7 +1,7 @@
 package gui.domain.concreteObjects;
 
 import controller.GameController;
-import gui.domain.abstractObjects.Piece;
+import simpleBoardGameEngine.coreComponents.Piece;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package gui.domain.abstractObjects;
+package simpleBoardGameEngine.coreComponents;
 
 import gui.domain.concreteObjects.Tile;
 

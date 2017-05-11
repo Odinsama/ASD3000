@@ -2,8 +2,8 @@ package gui;
 
 import controller.GameController;
 import game.Game;
-import game.logic.chess.ChessGame;
-import gui.domain.abstractObjects.Board;
+import usecases.chess.logic.ChessGame;
+import simpleBoardGameEngine.coreComponents.Board;
 
 /**
  * Created by Odin on 2/14/2017.

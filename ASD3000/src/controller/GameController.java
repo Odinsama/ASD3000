@@ -1,7 +1,7 @@
 package controller;
 
 import game.Game;
-import gui.domain.abstractObjects.Piece;
+import simpleBoardGameEngine.coreComponents.Piece;
 import gui.domain.concreteObjects.Tile;
 
 /**

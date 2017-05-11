@@ -1,7 +1,7 @@
 package game;
 
-import gui.domain.abstractObjects.Board;
-import gui.domain.abstractObjects.Piece;
+import simpleBoardGameEngine.coreComponents.Board;
+import simpleBoardGameEngine.coreComponents.Piece;
 import gui.domain.concreteObjects.Tile;
 
 /**

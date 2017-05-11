@@ -1,7 +1,7 @@
-package game.logic.chess;
+package usecases.chess.logic;
 
 import game.MoveLogic;
-import gui.domain.concreteObjects.chess.Pieces.Pawn;
+import usecases.chess.Pieces.Pawn;
 
 
 /**
