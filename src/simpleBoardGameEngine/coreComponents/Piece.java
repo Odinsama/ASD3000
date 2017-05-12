@@ -2,6 +2,7 @@ package simpleBoardGameEngine.coreComponents;
 
 import simpleBoardGameEngine.controller.GameController;
 import simpleBoardGameEngine.moves.MoveLogic;
+import simpleBoardGameEngine.utils.IPromotable;
 import simpleBoardGameEngine.utils.IWinCondition;
 
 import javax.swing.*;
@@ -21,7 +22,6 @@ public abstract class Piece extends JComponent {
     private final Boolean isNorth;
     protected Image pieceImage;
     private int movesMade = 0;
-    private boolean promoted = false;
     protected final List<MoveLogic> moveLogicList = new ArrayList<>();
 
     //within the anonymous mousePressed event
@@ -43,6 +43,13 @@ public abstract class Piece extends JComponent {
                     GameController.capture(piece);
                     if (piece instanceof IWinCondition){
                         ((IWinCondition) piece).checkWinConditions(!piece.isNorth());
+                    }
+                    Piece movingPiece = GameController.getMovingPiece();
+                    if (movingPiece instanceof IPromotable){
+                        Tile parent = (Tile) piece.getParent();
+                        if (parent.isPromotionTile() && parent.isNorth() != movingPiece.isNorth()){
+                            ((IPromotable) movingPiece).promote();
+                        }
                     }
                     GameController.clearHighlights();
                 }
@@ -71,10 +78,6 @@ public abstract class Piece extends JComponent {
 
     public int getMovesMade(){
         return movesMade;
-    }
-
-    boolean isPromoted() {
-        return promoted;
     }
 
 }

@@ -3,6 +3,7 @@ package usecases.checkers;
 import simpleBoardGameEngine.coreComponents.Board;
 import simpleBoardGameEngine.coreComponents.Piece;
 import simpleBoardGameEngine.coreComponents.Tile;
+import simpleBoardGameEngine.utils.BoardUtils;
 
 import java.awt.*;
 
@@ -12,7 +13,7 @@ import java.awt.*;
  * have been someone else.
  */
 public class CheckersBoard extends Board {
-    public CheckersBoard(Dimension dimension) {
+    CheckersBoard(Dimension dimension) {
         super(dimension, new Color(170, 247, 153), new Color(66, 134, 244));
     }
 
@@ -43,6 +44,7 @@ public class CheckersBoard extends Board {
 
     @Override
     public void setPromotionTiles() {
-
+        BoardUtils.setPromotionRows(this, true, 0);
+        BoardUtils.setPromotionRows(this, false, 7);
     }
 }

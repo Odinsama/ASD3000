@@ -36,19 +36,10 @@ public class Pawn extends Piece implements IPromotable {
 
     @Override
     public void promote() {
-
-        Class promotionChoice = new ChessPromotionDialog().getPromotionChoice();
-
-        try {
-            Piece newPiece = (Piece) (promotionChoice.getDeclaredConstructor(boolean.class).newInstance(isNorth()));
-            System.out.println(newPiece.toString());
-            Tile parent = (Tile) getParent();
-            parent.remove(this);
-            parent.setPiece(newPiece);
-
-        } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
-            e.printStackTrace();
-        }
+        Piece promotionChoice = new ChessPromotionDialog(isNorth()).getPromotionChoice();
+        Tile parent = (Tile) getParent();
+        parent.remove(this);
+        parent.setPiece(promotionChoice);
         repaint();
     }
 }

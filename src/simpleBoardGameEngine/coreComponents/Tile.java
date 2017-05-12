@@ -44,8 +44,6 @@ public class Tile extends JPanel {
                     Piece piece = GameController.getMovingPiece();
                     if (piece.isNorth() == isNorth){
                         return;
-                    }else if (piece.isPromoted()){
-                        return;
                     }else {
                         ((IPromotable) piece).promote();
                     }
@@ -83,6 +81,10 @@ public class Tile extends JPanel {
         this.isNorth = isNorth;
     }
 
+    boolean isPromotionTile(){
+        return isPromotionTile;
+    }
+
     void removeHighlight(){
         isHighlighted = false;
         possibleMove = null;
@@ -117,4 +119,7 @@ public class Tile extends JPanel {
     }
 
 
+    public boolean isNorth() {
+        return isNorth;
+    }
 }

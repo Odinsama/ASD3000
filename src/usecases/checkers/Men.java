@@ -33,6 +33,7 @@ public class Men extends Piece implements IPromotable {
 
     public void promote(){
         isKing = true;
+        revalidate();
         repaint();
     }
 

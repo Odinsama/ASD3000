@@ -1,5 +1,7 @@
 package usecases.chess.Pieces;
 
+import simpleBoardGameEngine.coreComponents.Piece;
+
 import javax.swing.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,19 +13,19 @@ import java.util.Map;
  */
 class ChessPromotionDialog {
 
-    private final Map<String, Class> chessClasses = new HashMap<>();
+    private final Map<String, Piece> chessClasses = new HashMap<>();
 
     private final Object[] possibilities;
 
-    ChessPromotionDialog(){
+    ChessPromotionDialog(boolean isNorth){
         possibilities = new Object[]{"Queen", "Rook", "Knight", "Bishop"};
-        chessClasses.put("Queen", Queen.class);
-        chessClasses.put("Rook",Rook.class) ;
-        chessClasses.put("Knight",Knight.class);
-        chessClasses.put("Bishop",Bishop.class);
+        chessClasses.put("Queen", new Queen(isNorth));
+        chessClasses.put("Rook", new Rook(isNorth)) ;
+        chessClasses.put("Knight", new Knight(isNorth));
+        chessClasses.put("Bishop", new Bishop(isNorth));
     }
 
-    Class getPromotionChoice() {
+    Piece getPromotionChoice() {
         Object o = JOptionPane.showInputDialog(
                 null,
                 "Pick what Piece you want to promote this pawn to!",
